@@ -1,0 +1,24 @@
+{
+  "name": "amaral.ads",
+  "short_name": "amaral.ads",
+  "description": "Gestão de tráfego pago — Google Ads, Meta Ads e performance corporativa.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0D000D",
+  "theme_color": "#0D000D",
+  "lang": "pt-BR",
+  "icons": [
+    {
+      "src": "/assets/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

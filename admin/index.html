@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin · amaral.ads</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0D000D">
+<link rel="icon" href="../assets/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="admin.css">
+</head>
+<body>
+<div id="loginView" class="login-wrap">
+  <form class="login-card" id="loginForm" autocomplete="on">
+    <div class="login-brand">
+      <img src="../assets/icon-192.png" alt="" width="48" height="48">
+      <div>
+        <strong>amaral<span>.ads</span></strong>
+        <small>Portal administrativo</small>
+      </div>
+    </div>
+    <h1>Entrar</h1>
+    <p class="login-sub">CRM local · leads, UTMs e tracking</p>
+    <label>Usuário
+      <input type="text" name="username" autocomplete="username" required placeholder="adminamaral">
+    </label>
+    <label>Senha
+      <input type="password" name="password" autocomplete="current-password" required placeholder="••••••••">
+    </label>
+    <p class="login-error" id="loginError" hidden></p>
+    <button type="submit" class="btn btn-primary" id="loginBtn">Acessar portal</button>
+    <p class="login-note">Autenticação local neste navegador. Para produção, migre com o prompt em DEPLOY-ANTIGRAVITY.md.</p>
+  </form>
+</div>
+
+<div id="appView" class="app" hidden>
+  <aside class="sidebar">
+    <div class="side-brand">
+      <img src="../assets/favicon-32.png" alt="" width="28" height="28">
+      <span>amaral<span class="cy">.ads</span></span>
+    </div>
+    <nav class="side-nav">
+      <button type="button" class="nav-item active" data-view="dashboard">Dashboard</button>
+      <button type="button" class="nav-item" data-view="kanban">Kanban CRM</button>
+      <button type="button" class="nav-item" data-view="leads">Lista de leads</button>
+      <button type="button" class="nav-item" data-view="settings">Configurações</button>
+    </nav>
+    <div class="side-foot">
+      <a href="../index.html" target="_blank" rel="noopener">Abrir LP ↗</a>
+      <button type="button" id="logoutBtn" class="btn btn-ghost btn-sm">Sair</button>
+    </div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <div>
+        <h2 id="viewTitle">Dashboard</h2>
+        <p id="viewSub">Visão geral dos leads capturados neste navegador</p>
+      </div>
+      <div class="top-actions">
+        <button type="button" class="btn btn-ghost btn-sm" id="btnExportJson">Exportar JSON</button>
+        <button type="button" class="btn btn-ghost btn-sm" id="btnExportCsv">Exportar CSV</button>
+        <button type="button" class="btn btn-primary btn-sm" id="btnNewLead">+ Novo lead</button>
+      </div>
+    </header>
+
+    <!-- DASHBOARD -->
+    <section class="view" id="view-dashboard">
+      <div class="stat-grid" id="statGrid"></div>
+      <div class="dash-grid">
+        <div class="panel">
+          <h3>Por etapa</h3>
+          <div id="stageBars"></div>
+        </div>
+        <div class="panel">
+          <h3>Origem (utm_source)</h3>
+          <div id="sourceList"></div>
+        </div>
+        <div class="panel panel-wide">
+          <h3>Leads recentes</h3>
+          <div class="table-wrap" id="recentTable"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- KANBAN -->
+    <section class="view" id="view-kanban" hidden>
+      <div class="toolbar">
+        <input type="search" id="kanbanSearch" placeholder="Buscar nome, empresa, e-mail…">
+        <select id="kanbanSource">
+          <option value="">Todas as origens</option>
+        </select>
+      </div>
+      <div class="kanban" id="kanbanBoard"></div>
+    </section>
+
+    <!-- LISTA -->
+    <section class="view" id="view-leads" hidden>
+      <div class="toolbar">
+        <input type="search" id="listSearch" placeholder="Buscar…">
+        <select id="listStage">
+          <option value="">Todas as etapas</option>
+        </select>
+        <select id="listSource">
+          <option value="">Todas as origens</option>
+        </select>
+      </div>
+      <div class="table-wrap" id="leadsTable"></div>
+    </section>
+
+    <!-- SETTINGS -->
+    <section class="view" id="view-settings" hidden>
+      <form class="settings-form" id="settingsForm">
+        <div class="panel">
+          <h3>Contato</h3>
+          <div class="field-grid">
+            <label>E-mail corporativo
+              <input type="email" name="email" required>
+            </label>
+            <label>WhatsApp (DDI+DDD+número)
+              <input type="text" name="whatsapp" placeholder="5511999999999" required>
+            </label>
+            <label>Instagram URL
+              <input type="url" name="instagram">
+            </label>
+          </div>
+        </div>
+
+        <div class="panel">
+          <h3>Tracking (GTM · GA4 · Meta Pixel)</h3>
+          <p class="hint">Apenas IDs públicos. Nunca cole token secreto, access token ou Measurement Protocol secret.</p>
+          <div class="field-grid">
+            <label>Google Tag Manager
+              <input type="text" name="gtmId" placeholder="GTM-XXXXXXX" pattern="GTM-[A-Za-z0-9]+">
+            </label>
+            <label>GA4 Measurement ID
+              <input type="text" name="ga4Id" placeholder="G-XXXXXXXXXX" pattern="G-[A-Za-z0-9]+">
+            </label>
+            <label>Meta Pixel ID
+              <input type="text" name="metaPixelId" placeholder="123456789012345" pattern="[0-9]{5,20}">
+            </label>
+          </div>
+          <div class="checks">
+            <label class="check"><input type="checkbox" name="trackingEnabled"> Tracking ativo</label>
+            <label class="check"><input type="checkbox" name="trackingForceLocal"> Forçar tracking em localhost (teste)</label>
+          </div>
+          <div class="diag" id="trackingDiag"></div>
+          <button type="button" class="btn btn-ghost btn-sm" id="btnDiagnose">Rodar diagnóstico</button>
+        </div>
+
+        <div class="panel">
+          <h3>Backup</h3>
+          <div class="row-actions">
+            <button type="button" class="btn btn-ghost" id="btnImportJson">Importar JSON</button>
+            <input type="file" id="importFile" accept="application/json,.json" hidden>
+            <button type="button" class="btn btn-ghost danger" id="btnReset">Resetar dados locais</button>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Salvar configurações</button>
+        <p class="save-msg" id="settingsSaved" hidden>Salvo.</p>
+      </form>
+    </section>
+  </main>
+</div>
+
+<!-- DRAWER LEAD -->
+<aside class="drawer" id="leadDrawer" hidden>
+  <div class="drawer-backdrop" data-close></div>
+  <div class="drawer-panel">
+    <header class="drawer-head">
+      <div>
+        <h3 id="drawerTitle">Lead</h3>
+        <p id="drawerSub"></p>
+      </div>
+      <button type="button" class="icon-btn" data-close aria-label="Fechar">×</button>
+    </header>
+    <form id="leadFormAdmin" class="drawer-body">
+      <input type="hidden" name="id">
+      <div class="field-grid">
+        <label>Nome <input name="nome" required></label>
+        <label>WhatsApp <input name="whatsapp" required></label>
+        <label>E-mail <input type="email" name="email"></label>
+        <label>Empresa <input name="empresa"></label>
+        <label>Segmento <input name="segmento"></label>
+        <label>Investimento <input name="investimento"></label>
+        <label>Site / Instagram <input name="site"></label>
+        <label>Valor potencial (R$) <input type="number" name="value" min="0" step="100"></label>
+        <label>Próximo contato <input type="date" name="nextContactAt"></label>
+        <label>Etapa
+          <select name="stage" id="drawerStage"></select>
+        </label>
+      </div>
+      <label class="full">Desafio / contexto
+        <textarea name="desafio" rows="2"></textarea>
+      </label>
+      <label class="full">Observações
+        <textarea name="notes" rows="3"></textarea>
+      </label>
+      <div class="attr-box" id="drawerAttr"></div>
+      <div class="history" id="drawerHistory"></div>
+      <div class="drawer-actions">
+        <a class="btn btn-ghost" id="drawerWpp" target="_blank" rel="noopener">WhatsApp</a>
+        <a class="btn btn-ghost" id="drawerMail">E-mail</a>
+        <button type="button" class="btn btn-ghost danger" id="drawerDelete">Excluir</button>
+        <button type="submit" class="btn btn-primary">Salvar</button>
+      </div>
+    </form>
+  </div>
+</aside>
+
+<script src="../assets/storage.js"></script>
+<script src="../assets/tracking.js"></script>
+<script src="admin.js"></script>
+</body>
+</html>

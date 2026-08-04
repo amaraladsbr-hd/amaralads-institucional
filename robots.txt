@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /admin
+
+# Substitua pelo domínio real após publicar:
+# Sitemap: https://marketing.amaralads.com.br/sitemap.xml
