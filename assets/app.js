@@ -17,7 +17,7 @@
   // agencia nunca vai abrir o /admin local.
   // TODO: cole aqui a URL do Web App depois de implantar o Apps Script
   // (veja instrucoes em ../docs/apps-script-lp-leads.gs)
-  var GOOGLE_SCRIPT_URL = 'COLE_AQUI_A_URL_DO_APPS_SCRIPT';
+  var GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz3YBOMWANgE-PCosDZo-bnaKzzrhl-1FJKg3DKrQBaW95-hf9fKa8ALWkum5kyUB1f/exec';
 
   function sendLeadToSheet(data, attribution) {
     if (!GOOGLE_SCRIPT_URL || GOOGLE_SCRIPT_URL.indexOf('COLE_AQUI') !== -1) return;
