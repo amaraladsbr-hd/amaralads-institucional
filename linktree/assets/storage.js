@@ -24,7 +24,7 @@
   var DEFAULT_SETTINGS = {
     email: 'amaral.ads.br@gmail.com',
     instagram: 'https://www.instagram.com/amaral.ads.br/',
-    whatsapp: '5531994954607',
+    whatsapp: '5531991985605',
     gtmId: '',
     ga4Id: '',
     metaPixelId: '',

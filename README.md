@@ -31,7 +31,7 @@ python3 -m http.server 8080
 
 - E-mail: amaral.ads.br@gmail.com
 - Instagram: https://www.instagram.com/amaral.ads.br/
-- WhatsApp: 5531994954607 (numero real da Amaral Ads, usado provisoriamente pra tudo)
+- WhatsApp: 5531991985605 (numero real da Amaral Ads, usado provisoriamente pra tudo)
 
 ## Pesquisa de mercado / SEO
 

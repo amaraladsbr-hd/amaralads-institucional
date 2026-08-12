@@ -39,7 +39,7 @@
   }
 
   function wppUrl(text) {
-    var num = (settings.whatsapp || '5531994954607').replace(/\D/g, '');
+    var num = (settings.whatsapp || '5531991985605').replace(/\D/g, '');
     return 'https://wa.me/' + num + '?text=' + encodeURIComponent(text);
   }
 
