@@ -25,7 +25,7 @@
     email: 'amaral.ads.br@gmail.com',
     instagram: 'https://www.instagram.com/amaral.ads.br/',
     whatsapp: '5531994954607',
-    gtmId: '',
+    gtmId: 'GTM-NW99XRHZ',
     ga4Id: '',
     metaPixelId: '',
     trackingEnabled: true,
