@@ -1,28 +1,20 @@
 <!DOCTYPE html>
 <!--
-  amaral.ads — Landing Page principal
-  Identidade: docs/manual_marca.png (Preto #0D000D, Chumbo #1C1C1E, Ciano #00D4FF, Vermelho #FF2D2D, Prata #A0A0A0)
-  Estrutura de referencia: Bench/4f0d599d... (LP Wolf Corp)
-
-  ANTES DE PUBLICAR, substituir os marcadores [CONFIRMAR]:
-  - Numero do WhatsApp (admin > Configurações ou constante em settings)
-  - Respostas do FAQ sobre contrato, investimento minimo e prazo
-  - Canonical/sitemap com dominio real
-  - Ativar tracking (GTM/GA4/Pixel) no admin
+  amaral.ads — Landing Page (ecossistema de growth B2B)
+  Identidade: Preto #0D000D · Ciano #00D4FF · Vermelho #FF2D2D · Prata #A0A0A0
+  Copy: plano-execucao-amaralads-v1
 -->
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gestão de Tráfego Pago | Google Ads e Meta Ads | amaral.ads</title>
-<meta name="description" content="Gestão de tráfego pago com rastreamento auditável. Google Ads, Meta Ads e leitura de custo por cliente, do clique ao contrato. Peça seu diagnóstico com a amaral.ads.">
+<title>Ecossistema de Growth B2B | Tráfego, LP, WhatsApp e CRM | amaral.ads</title>
+<meta name="description" content="Tráfego avançado não salva processo comercial quebrado. A amaral.ads une anúncios, landing pages ultrarrápidas, API oficial de WhatsApp e treinamento de vendas. Diagnóstico comercial gratuito.">
 <meta name="author" content="amaral.ads">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="theme-color" content="#0D000D">
-<meta name="keywords" content="gestão de tráfego pago, agência de tráfego pago, Google Ads, Meta Ads, Facebook Ads, Instagram Ads, GA4, GTM, diagnóstico de tráfego, performance digital">
-<!-- Canonical: descomente e ajuste após definir o domínio
-<link rel="canonical" href="https://SEU-DOMINIO/">
--->
+<meta name="keywords" content="growth B2B, tráfego pago, Google Ads, Meta Ads, landing page, API WhatsApp, CRM, treinamento de vendas, diagnóstico comercial">
+<link rel="canonical" href="https://marketing.amaralads.com.br/">
 <link rel="icon" href="assets/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png">
@@ -32,16 +24,17 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:site_name" content="amaral.ads">
-<meta property="og:title" content="Gestão de Tráfego Pago | Google Ads e Meta Ads | amaral.ads">
-<meta property="og:description" content="Tráfego pago com rastreamento auditável e leitura de receita. Google Ads, Meta Ads e diagnóstico sem métrica de vaidade.">
+<meta property="og:url" content="https://marketing.amaralads.com.br/">
+<meta property="og:title" content="Tráfego avançado não salva processo comercial quebrado. Nós resolvemos os dois.">
+<meta property="og:description" content="Ecossistema de growth B2B: anúncios, LPs ultrarrápidas, API oficial de WhatsApp e treinamento de vendas. Diagnóstico comercial gratuito.">
 <meta property="og:image" content="assets/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="amaral.ads: gestão de tráfego pago">
+<meta property="og:image:alt" content="amaral.ads — tráfego e performance corporativa">
 
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Gestão de Tráfego Pago | amaral.ads">
-<meta name="twitter:description" content="Google Ads, Meta Ads e rastreamento auditável. Peça seu diagnóstico.">
+<meta name="twitter:title" content="Ecossistema de Growth B2B | amaral.ads">
+<meta name="twitter:description" content="Unimos tráfego, tecnologia e comercial. Diagnóstico de 25 minutos, sem compromisso.">
 <meta name="twitter:image" content="assets/og-image.png">
 
 <script type="application/ld+json">
@@ -50,16 +43,19 @@
   "@graph": [
     {
       "@type": "Organization",
-      "@id": "#organization",
+      "@id": "https://marketing.amaralads.com.br/#organization",
       "name": "amaral.ads",
       "alternateName": "Amaral Ads",
-      "url": "/",
-      "logo": "assets/icon-512.png",
+      "url": "https://marketing.amaralads.com.br/",
+      "logo": "https://marketing.amaralads.com.br/assets/icon-512.png",
       "email": "amaral.ads.br@gmail.com",
-      "description": "Gestão de tráfego pago para empresas que querem crescer: Google Ads, Meta Ads e medição com GA4/GTM.",
-      "sameAs": [
-        "https://www.instagram.com/amaral.ads.br/"
-      ],
+      "description": "Assessoria de growth B2B: tráfego pago, landing pages, API oficial de WhatsApp, CRM e treinamento de vendas. Fundada por investidor da maior assessoria de marketing do país.",
+      "sameAs": ["https://www.instagram.com/amaral.ads.br/"],
+      "founder": {
+        "@type": "Person",
+        "name": "Luiz Amaral",
+        "jobTitle": "Investidor da maior assessoria de marketing do país"
+      },
       "contactPoint": {
         "@type": "ContactPoint",
         "contactType": "sales",
@@ -69,25 +65,24 @@
     },
     {
       "@type": "WebSite",
-      "@id": "#website",
+      "@id": "https://marketing.amaralads.com.br/#website",
       "name": "amaral.ads",
-      "url": "/",
-      "publisher": { "@id": "#organization" },
+      "url": "https://marketing.amaralads.com.br/",
+      "publisher": { "@id": "https://marketing.amaralads.com.br/#organization" },
       "inLanguage": "pt-BR"
     },
     {
       "@type": "ProfessionalService",
-      "@id": "#service",
-      "name": "Gestão de Tráfego Pago | amaral.ads",
-      "serviceType": "Gestão de tráfego pago",
-      "provider": { "@id": "#organization" },
+      "@id": "https://marketing.amaralads.com.br/#service",
+      "name": "Ecossistema de Growth B2B | amaral.ads",
+      "serviceType": "Growth B2B, tráfego pago, CRM e treinamento comercial",
+      "provider": { "@id": "https://marketing.amaralads.com.br/#organization" },
       "areaServed": "BR",
-      "url": "/",
-      "description": "Operação de Google Ads e Meta Ads com rastreamento auditável, ciclo curto de testes e leitura de custo por cliente.",
+      "url": "https://marketing.amaralads.com.br/",
       "offers": {
         "@type": "Offer",
-        "name": "Diagnóstico de tráfego pago",
-        "description": "Conversa inicial de entendimento sobre contas, funil e oportunidades de mídia paga.",
+        "name": "Diagnóstico comercial gratuito",
+        "description": "Sessão individual de 25 minutos com análise de anúncios e funil de vendas. Sem compromisso.",
         "price": "0",
         "priceCurrency": "BRL",
         "availability": "https://schema.org/InStock"
@@ -98,26 +93,42 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "O diagnóstico inicial tem custo?",
+          "name": "Quanto preciso investir em anúncios de início?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "A primeira conversa é de entendimento: olhamos suas contas, seu funil e seu objetivo pra dizer se faz sentido trabalharmos juntos."
+            "text": "O investimento é proporcional ao tamanho do seu mercado e à sua meta de vendas. Para empresas iniciantes, começamos de forma enxuta para validar a oferta antes de acelerar. Para empresas maduras, analisamos o CAC ideal para escalar com segurança."
           }
         },
         {
           "@type": "Question",
-          "name": "Existe investimento mínimo em mídia?",
+          "name": "Eu já tenho um time comercial / vendedor. Como vocês ajudam?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Depende do mercado e do ciclo de venda. No diagnóstico definimos o piso necessário pra gerar volume de dado suficiente pra decidir."
+            "text": "Nós não substituímos seu time comercial, nós o tornamos mais produtivo. Fornecemos scripts de abordagem para WhatsApp e organizamos o funil do CRM para que seus vendedores saibam exatamente para quem ligar e como conduzir o fechamento."
           }
         },
         {
           "@type": "Question",
-          "name": "Em quanto tempo aparece resultado?",
+          "name": "Em quanto tempo começamos a ver os leads chegando?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Os primeiros ciclos servem pra estruturar medição e aprender o que converte. Prazo real é estimado no diagnóstico, com o cenário do cliente na mesa."
+            "text": "A estrutura inicial de tráfego e landing pages é implementada em até 15 dias. Com os anúncios ativos, os leads começam a entrar em até 48 horas. A otimização fina do funil ocorre nas semanas seguintes com base em dados de vendas reais."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Minha equipe não sabe usar CRM. O que eu faço?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Fazemos a configuração técnica completa, desenhamos as etapas de vendas no CRM e oferecemos treinamento prático para a equipe. Deixamos a ferramenta pronta para que o time só precise mover os cards e registrar as vendas."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Qual a diferença entre a Amaral Ads e uma agência de marketing comum?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Agências comuns entregam relatórios de cliques e dizem que o trabalho delas acabou. Nós somos uma assessoria de Growth: analisamos desde o clique do anúncio até a velocidade da página, a resposta da automação do WhatsApp e a taxa de fechamento dos vendedores."
           }
         }
       ]
@@ -128,1146 +139,774 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 :root{
-    --black:#0D000D;
-    --panel:#1C1C1E;
-    --panel-2:#232326;
-    --cyan:#00D4FF;
-    --cyan-dim:rgba(0,212,255,0.12);
-    --red:#FF2D2D;
-    --silver:#A0A0A0;
-    --white:#F2F2F5;
-    --line:rgba(160,160,160,0.14);
-    --line-strong:rgba(160,160,160,0.28);
-    --ease:cubic-bezier(.22,.61,.36,1);
-    --pad:clamp(1.25rem, 6vw, 7rem);
+  --black:#0D000D;
+  --panel:#141216;
+  --panel-2:#1B191E;
+  --cyan:#00D4FF;
+  --cyan-dim:rgba(0,212,255,.12);
+  --red:#FF2D2D;
+  --silver:#A0A0A0;
+  --white:#F2F2F5;
+  --line:rgba(160,160,160,.14);
+  --line-strong:rgba(160,160,160,.28);
+  --ease:cubic-bezier(.22,.61,.36,1);
+  --pad:clamp(1.25rem, 5.5vw, 6.5rem);
 }
-
-*,*::before,*::after{ margin:0; padding:0; box-sizing:border-box; }
-html{ scroll-behavior:smooth; }
-
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:5.25rem}
 body{
-    background:var(--black);
-    color:var(--white);
-    font-family:'Inter', sans-serif;
-    font-weight:300;
-    font-size:16px;
-    line-height:1.65;
-    overflow-x:hidden;
-    -webkit-font-smoothing:antialiased;
+  background:var(--black);color:var(--white);
+  font-family:'DM Sans',sans-serif;font-weight:400;font-size:15px;line-height:1.6;
+  overflow-x:hidden;-webkit-font-smoothing:antialiased;
 }
-
-h1,h2,h3,h4,.display,.brand-name,.step-num,.stat-num{
-    font-family:'Space Grotesk', sans-serif;
-    font-weight:700;
-    letter-spacing:-0.025em;
-    line-height:1.08;
+h1,h2,h3,h4,.brand-name{
+  font-family:Syne,sans-serif;font-weight:700;letter-spacing:-.03em;line-height:1.12;
 }
+a{color:inherit;text-decoration:none}
+img,svg{display:block;max-width:100%}
+button,input,select,textarea{font:inherit}
 
-a{ color:inherit; text-decoration:none; }
-img,svg{ display:block; }
-
-/* ─── ATMOSFERA ─── */
 body::before{
-    content:'';
-    position:fixed; inset:0; z-index:0; pointer-events:none;
-    background:
-        radial-gradient(900px 520px at 78% -8%, rgba(0,212,255,0.10), transparent 62%),
-        radial-gradient(680px 420px at 4% 22%, rgba(0,212,255,0.05), transparent 60%);
-}
-body::after{
-    content:'';
-    position:fixed; inset:0; z-index:60; pointer-events:none; opacity:0.35;
-    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='0.32'/%3E%3C/svg%3E");
-    mix-blend-mode:overlay;
+  content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
+  background:
+    radial-gradient(820px 460px at 82% -6%, rgba(0,212,255,.09), transparent 62%),
+    radial-gradient(560px 380px at 6% 18%, rgba(0,212,255,.04), transparent 58%);
 }
 
-canvas#netBg{
-    position:absolute; inset:0; width:100%; height:100%;
-    z-index:0; pointer-events:none; opacity:0.6;
-}
-
-/* ─── HEADER ─── */
 header{
-    position:fixed; top:0; left:0; right:0; z-index:50;
-    display:flex; align-items:center; justify-content:space-between;
-    gap:1.5rem;
-    padding:1.1rem var(--pad);
-    background:rgba(13,0,13,0.55);
-    backdrop-filter:blur(14px);
-    border-bottom:1px solid transparent;
-    transition:background .35s var(--ease), border-color .35s var(--ease), padding .35s var(--ease);
+  position:fixed;top:0;left:0;right:0;z-index:50;
+  display:flex;align-items:center;justify-content:space-between;gap:1.5rem;
+  padding:1.05rem var(--pad);
+  background:rgba(13,0,13,.55);backdrop-filter:blur(16px);
+  border-bottom:1px solid transparent;
+  transition:background .35s var(--ease),border-color .35s var(--ease),padding .35s var(--ease);
 }
-header.scrolled{
-    background:rgba(13,0,13,0.9);
-    border-bottom-color:var(--line);
-    padding-top:.8rem; padding-bottom:.8rem;
-}
-#progress{
-    position:absolute; left:0; bottom:-1px; height:2px; width:0%;
-    background:linear-gradient(90deg, var(--cyan), rgba(0,212,255,0.25));
-    box-shadow:0 0 12px rgba(0,212,255,0.7);
-    transition:width .1s linear;
-}
+header.scrolled{background:rgba(13,0,13,.92);border-bottom-color:var(--line);padding-top:.78rem;padding-bottom:.78rem}
+#progress{position:absolute;left:0;bottom:-1px;height:2px;width:0;background:linear-gradient(90deg,var(--cyan),rgba(0,212,255,.2));box-shadow:0 0 12px rgba(0,212,255,.55)}
 
-.brand{ display:flex; align-items:center; gap:.7rem; }
-.brand-mark{ width:34px; height:34px; flex:none; }
-.brand-txt{ display:flex; flex-direction:column; line-height:1; }
-.brand-name{ font-size:1.12rem; letter-spacing:-0.03em; }
-.brand-name .dot{ color:var(--cyan); }
-.brand-tag{
-    font-size:.58rem; font-weight:400; letter-spacing:.16em;
-    text-transform:uppercase; color:var(--silver); margin-top:.28rem;
-}
+.brand{display:flex;align-items:center;gap:.7rem}
+.brand-mark{width:34px;height:34px;flex:none}
+.brand-txt{display:flex;flex-direction:column;line-height:1}
+.brand-name{font-size:1.12rem}
+.brand-name .dot{color:var(--cyan)}
+.brand-tag{font-size:.58rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--silver);margin-top:.28rem}
 
-nav{ display:flex; align-items:center; gap:2rem; }
-nav a{
-    font-size:.82rem; color:var(--silver); letter-spacing:.01em;
-    position:relative; padding:.25rem 0; transition:color .25s var(--ease);
-}
-nav a::after{
-    content:''; position:absolute; left:0; bottom:0; height:1px; width:0;
-    background:var(--cyan); transition:width .3s var(--ease);
-}
-nav a:hover{ color:var(--white); }
-nav a:hover::after{ width:100%; }
-.nav-links{ display:flex; gap:2rem; }
+nav{display:flex;align-items:center;gap:2rem}
+.nav-links{display:flex;gap:1.7rem}
+nav a:not(.btn){font-size:.82rem;color:var(--silver);position:relative;padding:.25rem 0;transition:color .25s}
+nav a:not(.btn)::after{content:'';position:absolute;left:0;bottom:0;height:1px;width:0;background:var(--cyan);transition:width .3s var(--ease)}
+nav a:not(.btn):hover{color:var(--white)}
+nav a:not(.btn):hover::after{width:100%}
 
-/* ─── BOTOES ─── */
 .btn{
-    display:inline-flex; align-items:center; gap:.6rem;
-    font-family:'Space Grotesk', sans-serif; font-weight:600; font-size:.86rem;
-    letter-spacing:-0.01em;
-    padding:.85rem 1.5rem; border-radius:2px; border:1px solid transparent;
-    cursor:pointer; position:relative; overflow:hidden;
-    transition:transform .25s var(--ease), box-shadow .3s var(--ease),
-               background .3s var(--ease), color .3s var(--ease), border-color .3s var(--ease);
+  display:inline-flex;align-items:center;justify-content:center;gap:.55rem;
+  font-family:Syne,sans-serif;font-weight:700;font-size:.84rem;letter-spacing:-.01em;
+  padding:.88rem 1.45rem;border-radius:3px;border:1px solid transparent;cursor:pointer;
+  transition:transform .25s var(--ease),box-shadow .3s var(--ease),background .3s,color .3s,border-color .3s;
 }
-.btn svg{ transition:transform .3s var(--ease); }
-.btn:hover svg{ transform:translateX(4px); }
+.btn svg{transition:transform .3s var(--ease)}
+.btn:hover svg{transform:translateX(4px)}
+.btn-primary{background:var(--cyan);color:#04121a}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 34px rgba(0,212,255,.3)}
+.btn-ghost{background:transparent;color:var(--white);border-color:var(--line-strong)}
+.btn-ghost:hover{border-color:var(--cyan);color:var(--cyan);transform:translateY(-2px)}
+.btn-red{background:transparent;color:var(--white);border-color:rgba(255,45,45,.45)}
+.btn-red:hover{border-color:var(--red);color:var(--red);transform:translateY(-2px)}
+.btn-sm{padding:.62rem 1.05rem;font-size:.78rem}
+.btn-block{width:100%}
+.micro{display:block;margin-top:.7rem;font-size:.75rem;color:var(--silver);max-width:42ch}
 
-.btn-primary{
-    background:var(--cyan); color:#04121a;
-    box-shadow:0 0 0 rgba(0,212,255,0);
+section{position:relative;z-index:2;padding:clamp(3rem,6vw,5rem) var(--pad)}
+.shell{max-width:1100px;margin:0 auto;width:100%}
+.mono{
+  font-family:'IBM Plex Mono',monospace;font-weight:500;font-size:.68rem;
+  letter-spacing:.18em;text-transform:uppercase;color:var(--cyan);
 }
-.btn-primary:hover{
-    transform:translateY(-2px);
-    box-shadow:0 10px 34px rgba(0,212,255,0.32);
-}
-.btn-ghost{
-    background:transparent; color:var(--white); border-color:var(--line-strong);
-}
-.btn-ghost:hover{ border-color:var(--cyan); color:var(--cyan); transform:translateY(-2px); }
-.btn-sm{ padding:.62rem 1.1rem; font-size:.8rem; }
+.kicker{display:inline-flex;align-items:center;gap:.65rem;margin-bottom:1.05rem}
+.kicker::before{content:'';width:22px;height:1px;background:currentColor;opacity:.65}
+h1,h2,h3,.lead,.hero p.sub{overflow-wrap:break-word;word-break:break-word}
+h2{font-size:clamp(1.28rem,2vw,1.7rem)}
+h2 em,h1 em{font-style:normal;color:var(--cyan)}
+.lead{color:var(--silver);font-size:.95rem;max-width:54ch;margin-top:.85rem}
+.section-head{margin-bottom:clamp(1.6rem,3vw,2.4rem)}
+.section-head.center{text-align:center;display:flex;flex-direction:column;align-items:center}
+.section-head.center .lead{text-align:center}
 
-/* ─── ESTRUTURA ─── */
-section{ position:relative; z-index:2; padding:clamp(4.5rem,9vw,8rem) var(--pad); }
-.shell{ max-width:1180px; margin:0 auto; width:100%; }
+.hero{display:flex;align-items:center;padding-top:clamp(5.6rem,10vh,7.2rem);padding-bottom:clamp(2.6rem,5vh,4rem)}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(1.8rem,4vw,3.2rem);align-items:center;width:100%}
+.hero h1{font-size:clamp(1.4rem,2.2vw,1.95rem);max-width:min(24ch,100%)}
+.hero p.sub{color:var(--silver);font-size:.95rem;max-width:52ch;margin-top:1.1rem}
+.hero-cta{display:flex;flex-wrap:wrap;align-items:center;gap:.7rem;margin-top:1.6rem}
+.hero-cta .micro{width:100%;margin-top:.15rem}
+.trust{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.55rem}
+.trust-item{
+  display:inline-flex;align-items:center;gap:.55rem;
+  background:rgba(20,18,22,.72);border:1px solid var(--line);border-radius:999px;
+  padding:.38rem .85rem .38rem .38rem;font-size:.78rem;color:var(--silver);
+}
+.trust-item img{width:28px;height:28px;border-radius:8px}
 
-.kicker{
-    display:inline-flex; align-items:center; gap:.65rem;
-    font-family:'Inter',sans-serif; font-weight:500;
-    font-size:.7rem; letter-spacing:.22em; text-transform:uppercase;
-    color:var(--cyan); margin-bottom:1.1rem;
+.eco{
+  display:flex;flex-direction:column;gap:.7rem;
+  background:linear-gradient(160deg,rgba(27,25,30,.92),rgba(13,0,13,.78));
+  border:1px solid var(--line);border-radius:8px;padding:1.2rem;
 }
-.kicker::before{ content:''; width:26px; height:1px; background:var(--cyan); opacity:.6; }
-.kicker.red{ color:var(--red); }
-.kicker.red::before{ background:var(--red); }
+.eco-step{
+  display:flex;align-items:center;gap:1rem;
+  background:rgba(13,0,13,.4);border:1px solid var(--line);border-radius:6px;padding:1rem 1.05rem;
+}
+.eco-step img{width:48px;height:48px;border-radius:10px;flex:none}
+.eco-step small{display:block;font-family:'IBM Plex Mono',monospace;font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--cyan);margin-bottom:.2rem}
+.eco-step h4{font-size:.95rem;font-weight:700}
+.eco-arrow{display:grid;place-items:center;color:rgba(0,212,255,.45);height:18px}
 
-h2{ font-size:clamp(1.85rem, 4.2vw, 3.1rem); text-transform:uppercase; }
-h2 em{ font-style:normal; color:var(--cyan); }
-.wm{ text-transform:none; letter-spacing:-0.03em; }
-.wm .dot{ color:var(--cyan); }
-.lead{ color:var(--silver); font-size:1.02rem; max-width:56ch; margin-top:1.1rem; }
-.section-head{ margin-bottom:clamp(2.5rem,5vw,4rem); }
-.section-head.center{ text-align:center; display:flex; flex-direction:column; align-items:center; }
-.section-head.center .lead{ text-align:center; }
+.ticker{position:relative;z-index:2;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:rgba(20,18,22,.45);overflow:hidden;padding:.85rem 0}
+.ticker-track{display:flex;gap:3rem;width:max-content;animation:slide 36s linear infinite}
+.ticker-track span{font-family:Syne,sans-serif;font-weight:700;font-size:.76rem;letter-spacing:.18em;text-transform:uppercase;color:var(--silver);display:flex;align-items:center;gap:3rem;white-space:nowrap}
+.ticker-track span::after{content:'';width:5px;height:5px;background:var(--cyan);transform:rotate(45deg)}
+@keyframes slide{to{transform:translateX(-50%)}}
 
-/* ─── HERO ─── */
-.hero{
-    min-height:100svh; display:flex; align-items:center;
-    padding-top:clamp(7rem,14vh,10rem); padding-bottom:clamp(4rem,8vh,6rem);
-    overflow:hidden;
+.split{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.path{
+  background:rgba(20,18,22,.72);border:1px solid var(--line);border-radius:10px;
+  padding:clamp(1.5rem,3vw,2.1rem);display:flex;flex-direction:column;gap:1.05rem;
+  transition:border-color .35s var(--ease),transform .35s var(--ease);
 }
-.hero-grid{
-    display:grid; grid-template-columns:1.15fr .85fr;
-    gap:clamp(2.5rem,6vw,5rem); align-items:center; width:100%;
-}
-.badge{
-    display:inline-flex; align-items:center; gap:.55rem;
-    font-size:.72rem; letter-spacing:.1em; text-transform:uppercase;
-    color:var(--cyan); background:var(--cyan-dim);
-    border:1px solid rgba(0,212,255,0.28); border-radius:100px;
-    padding:.4rem 1rem; margin-bottom:1.8rem;
-}
-.badge .pulse{
-    width:6px; height:6px; border-radius:50%; background:var(--cyan);
-    box-shadow:0 0 0 0 rgba(0,212,255,.7); animation:pulse 2.4s infinite;
-}
-@keyframes pulse{
-    0%{ box-shadow:0 0 0 0 rgba(0,212,255,.6); }
-    70%{ box-shadow:0 0 0 9px rgba(0,212,255,0); }
-    100%{ box-shadow:0 0 0 0 rgba(0,212,255,0); }
-}
+.path{cursor:pointer}
+.path:hover{transform:translateY(-4px)}
+.path-a{border-top:2px solid var(--cyan)}
+.path-b{border-top:2px solid var(--red)}
+.path.is-picked{box-shadow:0 0 0 1px var(--cyan),0 16px 40px rgba(0,0,0,.35)}
+.path-b.is-picked{box-shadow:0 0 0 1px var(--red),0 16px 40px rgba(0,0,0,.35)}
+.path-head{display:flex;align-items:flex-start;gap:.9rem}
+.path-head img{width:56px;height:56px;border-radius:12px;flex:none}
+.path .label{font-family:'IBM Plex Mono',monospace;font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--cyan)}
+.path-b .label{color:#ff8a8a}
+.path h3{font-size:clamp(1.02rem,1.5vw,1.18rem);margin-top:.25rem}
+.path .who{font-size:.82rem;color:var(--silver)}
+.path p{font-size:.9rem;color:var(--silver)}
+.bullets{list-style:none;display:flex;flex-direction:column;gap:.7rem;margin:auto 0 .2rem}
+.bullets li{display:flex;gap:.75rem;align-items:flex-start;font-size:.86rem}
+.bullets img{width:36px;height:36px;border-radius:8px;flex:none}
+.bullets strong{display:block;color:var(--white);font-family:Syne,sans-serif;font-weight:700;margin-bottom:.12rem}
 
-.hero h1{
-    font-size:clamp(2.2rem, 5.4vw, 4.15rem);
-    text-transform:uppercase; letter-spacing:-0.035em;
+.founder{
+  display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(1.6rem,4vw,3.2rem);align-items:center;
+  background:rgba(20,18,22,.5);border:1px solid var(--line);border-radius:12px;overflow:hidden;
 }
-.hero h1 .cy{ color:var(--cyan); }
-.hero p.sub{
-    color:var(--silver); font-size:clamp(.98rem,1.4vw,1.1rem);
-    max-width:50ch; margin-top:1.6rem;
+.founder-photo{position:relative;min-height:100%;background:#110e12}
+.founder-video{position:relative;margin:0;height:100%;aspect-ratio:9/16;max-height:min(70vh,620px)}
+.founder-video video{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
+.video-play{
+  position:absolute;inset:0;display:grid;place-items:center;
+  border:0;width:100%;cursor:pointer;
+  background:linear-gradient(180deg,transparent 45%,rgba(13,0,13,.45) 100%);
 }
-.hero-cta{ display:flex; flex-wrap:wrap; gap:.9rem; margin-top:2.4rem; }
-.hero-foot{
-    display:flex; flex-wrap:wrap; gap:1.6rem; margin-top:2.8rem;
-    padding-top:1.6rem; border-top:1px solid var(--line);
+.video-play .play{
+  width:56px;height:56px;border-radius:50%;display:grid;place-items:center;
+  background:rgba(0,212,255,.92);color:#04121a;
+  box-shadow:0 0 0 10px rgba(0,212,255,.12),0 12px 30px rgba(0,0,0,.4);
 }
-.hero-foot span{
-    font-size:.76rem; color:var(--silver); letter-spacing:.06em;
-    text-transform:uppercase; display:flex; align-items:center; gap:.5rem;
-}
-.hero-foot span::before{
-    content:''; width:5px; height:5px; background:var(--cyan);
-    transform:rotate(45deg); flex:none;
-}
+.founder-video.is-playing .video-play{display:none}
+.founder-copy{padding:clamp(1.6rem,3.5vw,2.6rem) clamp(1.4rem,3vw,2.2rem) clamp(1.6rem,3.5vw,2.6rem) 0}
+.founder-copy h2{font-size:clamp(1.25rem,2vw,1.65rem)}
+.founder-copy p{color:var(--silver);margin-top:1rem;max-width:48ch}
+.founder-meta{display:flex;flex-wrap:wrap;gap:.55rem;margin-top:1.4rem}
+.pill{font-size:.72rem;letter-spacing:.04em;border:1px solid var(--line);border-radius:999px;padding:.35rem .75rem;color:var(--silver)}
 
-/* Stepper do hero */
-.stepper{ display:flex; flex-direction:column; gap:.55rem; }
-.step-card{
-    display:flex; align-items:center; gap:1rem;
-    background:linear-gradient(135deg, rgba(28,28,30,.92), rgba(20,20,22,.7));
-    border:1px solid var(--line); border-radius:4px;
-    padding:1.05rem 1.2rem;
-    transition:border-color .35s var(--ease), transform .35s var(--ease), background .35s var(--ease);
+.flow-line{
+  display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:.6rem;align-items:center;margin-bottom:2.2rem;
 }
-.step-card:hover{ transform:translateX(6px); border-color:rgba(0,212,255,.4); }
-.step-card.active{
-    border-color:var(--cyan);
-    background:linear-gradient(135deg, rgba(0,212,255,.10), rgba(28,28,30,.85));
-    box-shadow:0 16px 44px rgba(0,0,0,.55), inset 0 0 0 1px rgba(0,212,255,.08);
+.flow-chip{
+  text-align:center;border:1px solid var(--line);background:rgba(20,18,22,.7);border-radius:8px;padding:.85rem .6rem;
 }
-.step-ico{
-    width:38px; height:38px; flex:none; border-radius:3px;
-    display:grid; place-items:center;
-    background:rgba(0,212,255,.1); border:1px solid rgba(0,212,255,.22);
-}
-.step-card.active .step-ico{ background:var(--cyan); border-color:var(--cyan); }
-.step-card.active .step-ico svg{ stroke:#04121a; }
-.step-label{
-    font-size:.62rem; letter-spacing:.18em; text-transform:uppercase;
-    color:var(--cyan); display:block; margin-bottom:.2rem;
-}
-.step-card h4{ font-size:.94rem; font-weight:600; letter-spacing:-0.01em; }
-.step-link{
-    display:grid; place-items:center; height:26px;
-    color:rgba(0,212,255,.4);
-}
+.flow-chip img{width:44px;height:44px;border-radius:10px;margin:0 auto .5rem}
+.flow-chip strong{display:block;font-family:Syne,sans-serif;font-size:.78rem;letter-spacing:.04em}
+.flow-chip span{display:block;font-size:.68rem;color:var(--silver);margin-top:.2rem}
+.flow-eq{color:var(--cyan);font-size:1.1rem;opacity:.7}
 
-/* ─── TICKER ─── */
-.ticker{
-    position:relative; z-index:2;
-    border-top:1px solid var(--line); border-bottom:1px solid var(--line);
-    background:rgba(28,28,30,.4); overflow:hidden; padding:.9rem 0;
-}
-.ticker-track{ display:flex; gap:3rem; width:max-content; animation:slide 34s linear infinite; }
-.ticker-track span{
-    font-family:'Space Grotesk',sans-serif; font-weight:600;
-    font-size:.78rem; letter-spacing:.22em; text-transform:uppercase;
-    color:var(--silver); display:flex; align-items:center; gap:3rem; white-space:nowrap;
-}
-.ticker-track span::after{ content:''; width:5px; height:5px; background:var(--cyan); transform:rotate(45deg); }
-@keyframes slide{ to{ transform:translateX(-50%); } }
+.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.pillar{background:rgba(20,18,22,.62);border:1px solid var(--line);border-radius:10px;padding:1.7rem 1.5rem}
+.pillar img{width:56px;height:56px;border-radius:12px;margin-bottom:1.15rem}
+.pillar h3{font-size:1.08rem;margin-bottom:.55rem}
+.pillar p{font-size:.88rem;color:var(--silver)}
+.pillar .why{margin-top:.85rem;padding-top:.85rem;border-top:1px solid var(--line);font-size:.82rem}
 
-/* ─── PROBLEMA ─── */
-.problem-grid{ display:grid; grid-template-columns:1fr 1fr; gap:clamp(2rem,4vw,3.5rem); align-items:start; }
-.pain-list{ display:flex; flex-direction:column; gap:.7rem; }
-.pain{
-    display:flex; gap:1rem; align-items:flex-start;
-    background:rgba(28,28,30,.55); border:1px solid var(--line);
-    border-left:2px solid rgba(255,45,45,.35);
-    padding:1.15rem 1.3rem; border-radius:3px;
-    transition:border-left-color .3s var(--ease), background .3s var(--ease), transform .3s var(--ease);
+.mock-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.mock{
+  background:rgba(20,18,22,.62);border:1px solid var(--line);border-radius:10px;overflow:hidden;
 }
-.pain:hover{ border-left-color:var(--red); background:rgba(28,28,30,.9); transform:translateX(5px); }
-.pain-ico{ color:var(--red); flex:none; margin-top:.15rem; opacity:.8; }
-.pain h4{ font-size:.98rem; font-weight:600; margin-bottom:.3rem; letter-spacing:-0.01em; }
-.pain p{ font-size:.86rem; color:var(--silver); line-height:1.6; }
+.mock img{width:100%;aspect-ratio:16/10;object-fit:cover;object-position:top}
+.mock figcaption{padding:1rem 1.15rem 1.2rem;font-size:.84rem;color:var(--silver)}
+.mock figcaption strong{display:block;color:var(--white);font-family:Syne,sans-serif;margin-bottom:.25rem}
 
-.verdict{
-    background:linear-gradient(150deg, rgba(28,28,30,.95), rgba(13,0,13,.9));
-    border:1px solid var(--line); border-radius:4px;
-    padding:clamp(1.8rem,3vw,2.6rem);
-    position:sticky; top:7rem;
-}
-.verdict::before{
-    content:''; display:block; width:40px; height:2px;
-    background:var(--red); margin-bottom:1.4rem;
-}
-.verdict p{
-    font-family:'Space Grotesk',sans-serif; font-weight:500;
-    font-size:clamp(1.05rem,1.7vw,1.3rem); line-height:1.45; letter-spacing:-0.02em;
-}
-.verdict p .rd{ color:var(--red); }
-.verdict p .cy{ color:var(--cyan); }
-.verdict .btn{ margin-top:1.8rem; }
-
-/* ─── SOLUCAO ─── */
-.pillars{ display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; }
-.pillar{
-    background:rgba(28,28,30,.5); border:1px solid var(--line);
-    border-radius:4px; padding:2rem 1.7rem;
-    position:relative; overflow:hidden;
-    transition:transform .4s var(--ease), border-color .4s var(--ease), background .4s var(--ease);
-}
-.pillar::after{
-    content:''; position:absolute; inset:auto -30% -60% auto; width:200px; height:200px;
-    background:radial-gradient(circle, rgba(0,212,255,.16), transparent 70%);
-    opacity:0; transition:opacity .45s var(--ease);
-}
-.pillar:hover{ transform:translateY(-6px); border-color:rgba(0,212,255,.35); background:rgba(28,28,30,.85); }
-.pillar:hover::after{ opacity:1; }
-.pillar-ico{
-    width:46px; height:46px; border-radius:3px; display:grid; place-items:center;
-    background:rgba(0,212,255,.08); border:1px solid rgba(0,212,255,.2);
-    margin-bottom:1.4rem; position:relative; z-index:1;
-}
-.pillar h3{ font-size:1.12rem; margin-bottom:.7rem; position:relative; z-index:1; }
-.pillar p{ font-size:.88rem; color:var(--silver); position:relative; z-index:1; }
-
-/* ─── COMO FUNCIONA ─── */
-.flow{ background:rgba(28,28,30,.35); border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
-.timeline{ display:grid; grid-template-columns:repeat(4,1fr); gap:1.5rem; position:relative; margin-top:1rem; }
-.timeline::before{
-    content:''; position:absolute; top:28px; left:12%; right:12%; height:1px;
-    background:linear-gradient(90deg, transparent, rgba(0,212,255,.4), rgba(0,212,255,.4), transparent);
-}
-.node{ text-align:center; position:relative; }
-.node-dot{
-    width:56px; height:56px; margin:0 auto 1.3rem; border-radius:50%;
-    display:grid; place-items:center; background:var(--black);
-    border:1px solid rgba(0,212,255,.45); color:var(--cyan);
-    font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:1.1rem;
-    position:relative; z-index:1;
-    transition:background .35s var(--ease), color .35s var(--ease), box-shadow .35s var(--ease);
-}
-.node:hover .node-dot{ background:var(--cyan); color:#04121a; box-shadow:0 0 30px rgba(0,212,255,.45); }
-.node h4{ font-size:1rem; margin-bottom:.55rem; }
-.node p{ font-size:.84rem; color:var(--silver); max-width:26ch; margin:0 auto; }
-
-/* ─── COMPARATIVO ─── */
-.table-wrap{ border:1px solid var(--line); border-radius:4px; overflow:hidden; background:rgba(28,28,30,.5); }
-table{ width:100%; border-collapse:collapse; }
-thead th{
-    font-family:'Space Grotesk',sans-serif; font-weight:600;
-    font-size:.7rem; letter-spacing:.18em; text-transform:uppercase;
-    text-align:left; padding:1.1rem 1.5rem; color:var(--silver);
-    background:rgba(13,0,13,.6); border-bottom:1px solid var(--line);
-}
-thead th:last-child{ color:var(--cyan); }
-tbody td{
-    padding:1.15rem 1.5rem; font-size:.88rem; border-bottom:1px solid var(--line);
-    vertical-align:top;
-}
-tbody tr:last-child td{ border-bottom:none; }
-tbody tr{ transition:background .28s var(--ease); }
-tbody tr:hover{ background:rgba(0,212,255,.04); }
-td.crit{ font-weight:500; color:var(--white); font-family:'Space Grotesk',sans-serif; font-size:.9rem; }
-td.other{ color:var(--silver); }
-td.ours{ color:var(--white); }
-.mark{ display:inline-flex; align-items:flex-start; gap:.6rem; }
-.mark svg{ flex:none; margin-top:.18rem; }
-
-/* ─── PRA QUEM ─── */
-.fit{ background:rgba(28,28,30,.35); border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
-.fit-grid{ display:grid; grid-template-columns:1fr .9fr; gap:clamp(2rem,5vw,4rem); align-items:center; }
-.checks{ display:flex; flex-direction:column; gap:.6rem; margin-top:2rem; }
-.check{
-    display:flex; gap:.9rem; align-items:flex-start;
-    background:rgba(13,0,13,.45); border:1px solid var(--line);
-    padding:.9rem 1.1rem; border-radius:3px; font-size:.9rem;
-    transition:border-color .3s var(--ease);
-}
-.check:hover{ border-color:rgba(0,212,255,.35); }
-.check-ico{
-    width:20px; height:20px; flex:none; border-radius:2px; margin-top:.12rem;
-    display:grid; place-items:center; background:rgba(0,212,255,.14);
-}
-.scope{ display:flex; flex-direction:column; gap:.8rem; }
-.scope-card{
-    background:linear-gradient(140deg, rgba(28,28,30,.9), rgba(13,0,13,.7));
-    border:1px solid var(--line); border-radius:4px; padding:1.4rem 1.5rem;
-    transition:transform .35s var(--ease), border-color .35s var(--ease);
-}
-.scope-card:hover{ transform:translateY(-4px); border-color:rgba(0,212,255,.35); }
-.scope-card .scope-ico{ color:var(--cyan); margin-bottom:.9rem; }
-.scope-card h4{ font-size:.98rem; margin-bottom:.4rem; }
-.scope-card p{ font-size:.83rem; color:var(--silver); }
-
-/* ─── FAQ ─── */
-.faq-list{ max-width:760px; margin:0 auto; display:flex; flex-direction:column; gap:.6rem; }
-.faq{
-    background:rgba(28,28,30,.55); border:1px solid var(--line);
-    border-radius:3px; overflow:hidden;
-    transition:border-color .3s var(--ease), background .3s var(--ease);
-}
-.faq[open]{ border-color:rgba(0,212,255,.35); background:rgba(28,28,30,.9); }
+.faq-list{max-width:780px;margin:0 auto;display:flex;flex-direction:column;gap:.55rem}
+.faq{background:rgba(20,18,22,.62);border:1px solid var(--line);border-radius:6px;overflow:hidden}
+.faq[open]{border-color:rgba(0,212,255,.32)}
 .faq summary{
-    list-style:none; cursor:pointer; padding:1.15rem 1.4rem;
-    display:flex; align-items:center; justify-content:space-between; gap:1.5rem;
-    font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:.94rem;
-    letter-spacing:-0.01em; transition:color .25s var(--ease);
+  list-style:none;cursor:pointer;padding:1.12rem 1.3rem;display:flex;align-items:center;justify-content:space-between;gap:1.4rem;
+  font-family:Syne,sans-serif;font-weight:700;font-size:.94rem;
 }
-.faq summary::-webkit-details-marker{ display:none; }
-.faq summary:hover{ color:var(--cyan); }
-.faq summary .plus{
-    flex:none; color:var(--cyan); transition:transform .3s var(--ease);
-}
-.faq[open] summary .plus{ transform:rotate(135deg); }
-.faq-body{ padding:0 1.4rem 1.35rem; font-size:.88rem; color:var(--silver); max-width:66ch; }
-.faq-foot{ text-align:center; margin-top:2.5rem; }
-.faq-foot p{ font-size:.88rem; color:var(--silver); margin-bottom:1.1rem; }
+.faq summary::-webkit-details-marker{display:none}
+.faq summary:hover{color:var(--cyan)}
+.faq summary .plus{flex:none;color:var(--cyan);transition:transform .3s}
+.faq[open] summary .plus{transform:rotate(135deg)}
+.faq-body{padding:0 1.3rem 1.3rem;font-size:.88rem;color:var(--silver);max-width:68ch}
 
-/* ─── CTA FINAL + FORM ─── */
-.final{
-    position:relative; overflow:hidden;
-    background:radial-gradient(680px 340px at 50% 55%, rgba(0,212,255,.13), transparent 70%), rgba(28,28,30,.5);
-    border-top:1px solid var(--line);
-}
-.final .shell{ position:relative; z-index:2; }
-.final-grid{
-    display:grid; grid-template-columns:1fr 1.05fr;
-    gap:clamp(2rem,5vw,4rem); align-items:center;
-}
-.final-copy h2{ font-size:clamp(1.9rem,4.2vw,3.1rem); max-width:14ch; text-transform:uppercase; }
-.final-copy h2 em{ white-space:nowrap; font-style:normal; color:var(--cyan); }
-.final-copy p{ color:var(--silver); max-width:42ch; margin:1.3rem 0 1.8rem; font-size:1rem; }
-.final-points{ display:flex; flex-direction:column; gap:.7rem; }
-.final-points li{
-    list-style:none; display:flex; align-items:flex-start; gap:.7rem;
-    font-size:.88rem; color:var(--silver);
-}
-.final-points li svg{ flex:none; margin-top:.15rem; color:var(--cyan); }
+.final{overflow:hidden;background:radial-gradient(680px 340px at 50% 55%,rgba(0,212,255,.11),transparent 70%),rgba(20,18,22,.45);border-top:1px solid var(--line)}
+.final-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:clamp(2rem,5vw,4rem);align-items:center}
+.final-copy h2{font-size:clamp(1.3rem,2.2vw,1.7rem);max-width:16ch}
+.final-copy p{color:var(--silver);max-width:44ch;margin:1.2rem 0 1.6rem}
+.final-points{display:flex;flex-direction:column;gap:.7rem}
+.final-points li{list-style:none;display:flex;align-items:flex-start;gap:.7rem;font-size:.88rem;color:var(--silver)}
+.final-points li svg{flex:none;margin-top:.15rem;color:var(--cyan)}
 
 .lead-form{
-    background:linear-gradient(150deg, rgba(28,28,30,.95), rgba(13,0,13,.88));
-    border:1px solid var(--line); border-radius:4px;
-    padding:clamp(1.4rem,3vw,2rem);
-    box-shadow:0 24px 60px rgba(0,0,0,.45);
+  background:linear-gradient(150deg,rgba(27,25,30,.96),rgba(13,0,13,.9));
+  border:1px solid var(--line);border-radius:10px;padding:clamp(1.2rem,2.5vw,1.7rem);
+  box-shadow:0 24px 60px rgba(0,0,0,.45);
+  transition:box-shadow .35s var(--ease),border-color .35s var(--ease);
 }
-.lead-form .form-head{ margin-bottom:1.4rem; }
-.lead-form .form-head h3{
-    font-size:1.2rem; margin-bottom:.35rem; text-transform:none; letter-spacing:-0.02em;
+.lead-form.is-armed{border-color:rgba(0,212,255,.45);box-shadow:0 0 0 1px rgba(0,212,255,.25),0 24px 60px rgba(0,0,0,.45)}
+.lead-steps{display:flex;gap:.4rem;margin-bottom:1rem;list-style:none}
+.lead-steps li{
+  flex:1;text-align:center;font-size:.68rem;letter-spacing:.04em;text-transform:uppercase;
+  color:var(--silver);border-bottom:2px solid var(--line);padding:.35rem .2rem .55rem;
+  font-family:Syne,sans-serif;font-weight:700;
 }
-.lead-form .form-head p{ font-size:.82rem; color:var(--silver); }
-
-.field{ display:flex; flex-direction:column; gap:.4rem; margin-bottom:.9rem; }
-.field-row{ display:grid; grid-template-columns:1fr 1fr; gap:.8rem; }
-.field label{
-    font-family:'Space Grotesk',sans-serif; font-weight:600;
-    font-size:.72rem; letter-spacing:.06em; text-transform:uppercase; color:var(--white);
+.lead-steps li.is-on{color:var(--cyan);border-bottom-color:var(--cyan)}
+.lead-steps li.is-done{color:var(--white);border-bottom-color:rgba(0,212,255,.4)}
+.path-chip{
+  display:inline-flex;align-items:center;gap:.45rem;margin-bottom:.9rem;
+  font-size:.78rem;color:var(--cyan);background:var(--cyan-dim);
+  border:1px solid rgba(0,212,255,.28);border-radius:999px;padding:.35rem .8rem;width:fit-content;
 }
-.field label .req{ color:var(--cyan); }
-.field label .opt{ color:var(--silver); font-weight:400; text-transform:none; letter-spacing:0; font-family:'Inter',sans-serif; font-size:.7rem; }
-.field input, .field select, .field textarea{
-    width:100%; background:rgba(13,0,13,.55); color:var(--white);
-    border:1px solid var(--line); border-radius:3px;
-    padding:.85rem 1rem; font-family:'Inter',sans-serif; font-size:.92rem; font-weight:400;
-    outline:none; transition:border-color .25s var(--ease), box-shadow .25s var(--ease);
-    appearance:none; -webkit-appearance:none;
+.path-chip.is-b{color:#ffb4b4;background:rgba(255,45,45,.1);border-color:rgba(255,45,45,.3)}
+.lead-form .form-head{margin-bottom:1.3rem}
+.lead-form .form-head h3{font-size:1.2rem;margin-bottom:.3rem}
+.lead-form .form-head p{font-size:.82rem;color:var(--silver)}
+.field{display:flex;flex-direction:column;gap:.4rem;margin-bottom:.85rem}
+.field-row{display:grid;grid-template-columns:1fr 1fr;gap:.8rem}
+.field label{font-family:Syne,sans-serif;font-weight:700;font-size:.7rem;letter-spacing:.05em;text-transform:uppercase}
+.field label .req{color:var(--cyan)}
+.field label .opt{color:var(--silver);font-weight:400;text-transform:none;letter-spacing:0;font-family:'DM Sans',sans-serif;font-size:.7rem}
+.field input,.field select,.field textarea{
+  width:100%;background:rgba(13,0,13,.55);color:var(--white);border:1px solid var(--line);border-radius:4px;
+  padding:.82rem 1rem;outline:none;appearance:none;
 }
 .field select{
-    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%2300D4FF' stroke-width='1.6' stroke-linecap='round'/%3E%3C/svg%3E");
-    background-repeat:no-repeat; background-position:right 1rem center; padding-right:2.4rem;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%2300D4FF' stroke-width='1.6' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:right 1rem center;padding-right:2.4rem;
 }
-.field select option{ background:#1C1C1E; color:var(--white); }
-.field textarea{ resize:vertical; min-height:90px; line-height:1.5; }
-.field input::placeholder, .field textarea::placeholder{ color:rgba(160,160,160,.55); }
-.field input:focus, .field select:focus, .field textarea:focus{
-    border-color:rgba(0,212,255,.55); box-shadow:0 0 0 3px rgba(0,212,255,.12);
-}
-.field input.invalid, .field select.invalid, .field textarea.invalid{
-    border-color:rgba(255,45,45,.55);
-}
-.lead-form .btn{ width:100%; justify-content:center; margin-top:.3rem; }
-.form-note{ font-size:.72rem; color:var(--silver); text-align:center; margin-top:.9rem; }
-.form-success{
-    display:none; text-align:center; padding:2rem 1rem;
-}
-.form-success.show{ display:block; }
-.form-success .ok-ico{
-    width:52px; height:52px; margin:0 auto 1.2rem; border-radius:50%;
-    display:grid; place-items:center; background:rgba(0,212,255,.12);
-    border:1px solid rgba(0,212,255,.35);
-}
-.form-success h3{ font-size:1.3rem; margin-bottom:.6rem; }
-.form-success p{ color:var(--silver); font-size:.9rem; max-width:34ch; margin:0 auto 1.4rem; }
-.lead-form.is-sent .form-fields{ display:none; }
-.lead-form.is-sent .form-success{ display:block; }
+.field select option{background:#1C1C1E}
+.field textarea{resize:vertical;min-height:86px}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:rgba(0,212,255,.55);box-shadow:0 0 0 3px rgba(0,212,255,.12)}
+.field input.invalid,.field select.invalid,.field textarea.invalid{border-color:rgba(255,45,45,.55)}
+.lead-form .btn{width:100%;margin-top:.25rem}
+.form-note{font-size:.72rem;color:var(--silver);text-align:center;margin-top:.85rem}
+.form-success{display:none;text-align:center;padding:2rem 1rem}
+.form-success .ok-ico{width:52px;height:52px;margin:0 auto 1.2rem;border-radius:50%;display:grid;place-items:center;background:rgba(0,212,255,.12);border:1px solid rgba(0,212,255,.35)}
+.form-success h3{font-size:1.25rem;margin-bottom:.55rem}
+.form-success p{color:var(--silver);font-size:.9rem;max-width:34ch;margin:0 auto 1.35rem}
+.lead-form.is-sent .form-fields{display:none}
+.lead-form.is-sent .form-success{display:block}
 
-/* ─── FOOTER ─── */
-footer{
-    position:relative; z-index:2;
-    padding:clamp(3rem,5vw,4.5rem) var(--pad) 2rem;
-    border-top:1px solid var(--line); background:rgba(13,0,13,.85);
-}
-.foot-grid{
-    display:grid; grid-template-columns:1.4fr repeat(3,.8fr);
-    gap:2.5rem; max-width:1180px; margin:0 auto;
-}
-.foot-about p{ font-size:.83rem; color:var(--silver); max-width:34ch; margin-top:1.1rem; }
-.foot-col h5{
-    font-family:'Space Grotesk',sans-serif; font-weight:600;
-    font-size:.68rem; letter-spacing:.2em; text-transform:uppercase;
-    color:var(--white); margin-bottom:1.1rem;
-}
-.foot-col a, .foot-col span{
-    display:block; font-size:.84rem; color:var(--silver);
-    margin-bottom:.6rem; transition:color .25s var(--ease);
-}
-.foot-col a:hover{ color:var(--cyan); }
-.foot-bottom{
-    max-width:1180px; margin:3rem auto 0; padding-top:1.5rem;
-    border-top:1px solid var(--line);
-    display:flex; align-items:center; justify-content:space-between; gap:1rem;
-    font-size:.76rem; color:var(--silver); flex-wrap:wrap;
-}
+footer{position:relative;z-index:2;padding:clamp(3rem,5vw,4.4rem) var(--pad) 2rem;border-top:1px solid var(--line);background:rgba(13,0,13,.88)}
+.foot-grid{display:grid;grid-template-columns:1.4fr repeat(3,.8fr);gap:2.4rem;max-width:1180px;margin:0 auto}
+.foot-about p{font-size:.83rem;color:var(--silver);max-width:36ch;margin-top:1.05rem}
+.foot-col h5{font-family:Syne,sans-serif;font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;margin-bottom:1.05rem}
+.foot-col a,.foot-col span{display:block;font-size:.84rem;color:var(--silver);margin-bottom:.55rem;transition:color .25s}
+.foot-col a:hover{color:var(--cyan)}
+.foot-bottom{max-width:1180px;margin:2.8rem auto 0;padding-top:1.4rem;border-top:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:1rem;font-size:.76rem;color:var(--silver);flex-wrap:wrap}
 
-/* ─── REVEAL ─── */
-/* Sem JS o conteudo aparece normalmente — o estado oculto so existe com a classe .js no html */
-.js .reveal{ opacity:0; transform:translateY(26px); }
-.js .reveal.in{ opacity:1; transform:none; transition:opacity .8s var(--ease), transform .8s var(--ease); }
+.js .reveal{opacity:0;transform:translateY(22px)}
+.js .reveal.in{opacity:1;transform:none;transition:opacity .75s var(--ease),transform .75s var(--ease)}
 
-
-/* ─── RESPONSIVO ─── */
 @media (max-width:1024px){
-    .hero-grid{ grid-template-columns:1fr; gap:3rem; }
-    .problem-grid, .fit-grid, .final-grid{ grid-template-columns:1fr; }
-    .verdict{ position:static; }
-    .pillars{ grid-template-columns:1fr; }
-    .timeline{ grid-template-columns:repeat(2,1fr); gap:2.5rem 1.5rem; }
-    .timeline::before{ display:none; }
-    .foot-grid{ grid-template-columns:1fr 1fr; }
+  .hero-grid,.split,.founder,.pillars,.mock-grid,.final-grid{grid-template-columns:1fr}
+  .flow-line{grid-template-columns:1fr;gap:.45rem}
+  .flow-eq{transform:rotate(90deg);justify-self:center}
+  .founder-copy{padding:0 1.3rem 1.6rem}
+  .founder-video{max-height:min(56vh,480px);margin:0 auto}
+  .foot-grid{grid-template-columns:1fr 1fr}
+  .hero-cta .btn{width:auto}
 }
 @media (max-width:720px){
-    .nav-links{ display:none; }
-    .brand-tag{ display:none; }
-    .timeline{ grid-template-columns:1fr; }
-    .foot-grid{ grid-template-columns:1fr; gap:2rem; }
-    .hero-cta .btn{ width:100%; justify-content:center; }
-    .field-row{ grid-template-columns:1fr; }
-
-    /* Comparativo vira card empilhado — mantem as duas colunas visiveis */
-    thead{ display:none; }
-    tbody tr{ display:block; padding:1.15rem 1.2rem; border-bottom:1px solid var(--line); }
-    tbody td{ display:block; padding:0; border:none; }
-    td.crit{ font-size:.95rem; margin-bottom:.85rem; }
-    td.other, td.ours{ font-size:.84rem; }
-    td.other{ margin-bottom:.6rem; }
-    td.other::before, td.ours::before{
-        display:block; font-family:'Inter',sans-serif; font-weight:500;
-        font-size:.6rem; letter-spacing:.18em; text-transform:uppercase;
-        margin-bottom:.25rem;
-    }
-    td.other::before{ content:'Mercado'; color:rgba(255,45,45,.75); }
-    td.ours::before{ content:'amaral.ads'; color:var(--cyan); }
-    .foot-bottom{ flex-direction:column; align-items:flex-start; }
+  .nav-links,.brand-tag,nav .btn{display:none}
+  .hero h1{font-size:1.32rem;max-width:none;line-height:1.18}
+  .hero p.sub{font-size:.9rem}
+  .hero-cta{flex-direction:column;align-items:stretch}
+  .hero-cta .btn,.path .btn{width:100%;white-space:normal;line-height:1.25;text-align:center}
+  .field-row,.foot-grid{grid-template-columns:1fr}
+  .foot-bottom{flex-direction:column;align-items:flex-start}
+  .lead-steps{display:none}
+  .founder-video{max-height:min(52vh,420px)}
 }
-
+#caminhos,#quem,#metodo,#faq,#contato{scroll-margin-top:5.25rem}
 @media (prefers-reduced-motion:reduce){
-    *{ animation-duration:.01ms !important; animation-iteration-count:1 !important; transition-duration:.01ms !important; }
-    html{ scroll-behavior:auto; }
-    .reveal{ opacity:1; transform:none; }
+  *{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+  html{scroll-behavior:auto}
+  .reveal{opacity:1;transform:none}
 }
 </style>
 <script>
-    if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-        document.documentElement.classList.add('js');
-    }
+  if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    document.documentElement.classList.add('js');
+  }
 </script>
 </head>
 <body>
 
 <header id="header">
-    <a href="#topo" class="brand">
-        <svg class="brand-mark" viewBox="0 0 100 100" fill="none" aria-hidden="true">
-            <g stroke="#00D4FF" stroke-width="3" stroke-linecap="round">
-                <path d="M10 54 L44 60 M10 54 L30 84 M10 54 L62 32 M30 84 L44 60 M44 60 L62 32 M44 60 L74 66 M62 32 L74 66"/>
-            </g>
-            <g fill="#00D4FF">
-                <circle cx="10" cy="54" r="5.5"/><circle cx="30" cy="84" r="6"/>
-                <circle cx="44" cy="60" r="6"/><circle cx="62" cy="32" r="8"/>
-                <circle cx="74" cy="66" r="6"/>
-            </g>
-            <path d="M62 32 L86 10" stroke="#FF2D2D" stroke-width="4" stroke-linecap="round"/>
-            <path d="M92 4 L74 10 L86 20 Z" fill="#FF2D2D"/>
-        </svg>
-        <span class="brand-txt">
-            <span class="brand-name">amaral<span class="dot">.ads</span></span>
-            <span class="brand-tag">gestão de tráfego pago</span>
-        </span>
+  <a href="#topo" class="brand">
+    <svg class="brand-mark" viewBox="0 0 100 100" fill="none" aria-hidden="true">
+      <g stroke="#00D4FF" stroke-width="3" stroke-linecap="round">
+        <path d="M10 54 L44 60 M10 54 L30 84 M10 54 L62 32 M30 84 L44 60 M44 60 L62 32 M44 60 L74 66 M62 32 L74 66"/>
+      </g>
+      <g fill="#00D4FF">
+        <circle cx="10" cy="54" r="5.5"/><circle cx="30" cy="84" r="6"/>
+        <circle cx="44" cy="60" r="6"/><circle cx="62" cy="32" r="8"/>
+        <circle cx="74" cy="66" r="6"/>
+      </g>
+      <path d="M62 32 L86 10" stroke="#FF2D2D" stroke-width="4" stroke-linecap="round"/>
+      <path d="M92 4 L74 10 L86 20 Z" fill="#FF2D2D"/>
+    </svg>
+    <span class="brand-txt">
+      <span class="brand-name">amaral<span class="dot">.ads</span></span>
+      <span class="brand-tag">tráfego e performance corporativa</span>
+    </span>
+  </a>
+  <nav>
+    <div class="nav-links">
+      <a href="#caminhos">Caminhos</a>
+      <a href="#metodo">Método</a>
+      <a href="#quem">Quem somos</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <a href="#contato" class="btn btn-primary btn-sm js-path" data-path="diagnostico">
+      Agendar diagnóstico
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
     </a>
-    <nav>
-        <div class="nav-links">
-            <a href="#problema">O Problema</a>
-            <a href="#solucao">Solução</a>
-            <a href="#processo">Como Funciona</a>
-            <a href="#pra-quem">Pra Quem É</a>
-            <a href="#faq">FAQ</a>
-        </div>
-        <a href="#contato" class="btn btn-primary btn-sm">
-            Falar com a gente
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-        </a>
-    </nav>
-    <div id="progress"></div>
+  </nav>
+  <div id="progress"></div>
 </header>
 
-<!-- ══════════ HERO ══════════ -->
 <section class="hero" id="topo">
-    <canvas id="netBg"></canvas>
-    <div class="shell">
-        <div class="hero-grid">
-            <div class="reveal">
-                <span class="badge"><span class="pulse"></span> Gestão de tráfego pago · Google Ads &amp; Meta Ads</span>
-                <h1>Quem não aparece,<br>não vende.<br><span class="cy">Hora de mudar isso.</span></h1>
-                <p class="sub">
-                    Gestão de tráfego pago pra empresa que quer crescer: comece a investir com método,
-                    ou traga a operação que já roda pra ganhar rastreamento de ponta a ponta e decisão
-                    baseada em número que dá pra auditar. Do clique ao contrato assinado.
-                </p>
-                <div class="hero-cta">
-                    <a href="#contato" class="btn btn-primary">
-                        Quero um diagnóstico
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-                    </a>
-                    <a href="#processo" class="btn btn-ghost">Ver como funciona</a>
-                </div>
-                <div class="hero-foot">
-                    <span>Google Ads</span>
-                    <span>Meta Ads</span>
-                    <span>GA4 &amp; rastreamento</span>
-                </div>
-            </div>
-
-            <div class="stepper reveal">
-                <div class="step-card">
-                    <div class="step-ico">
-                        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#00D4FF" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
-                    </div>
-                    <div>
-                        <span class="step-label">Passo 1</span>
-                        <h4>Mapeamos seu ponto de partida</h4>
-                    </div>
-                </div>
-                <div class="step-link">
-                    <svg width="13" height="20" viewBox="0 0 14 22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 2v17M2 14l5 5 5-5"/></svg>
-                </div>
-                <div class="step-card">
-                    <div class="step-ico">
-                        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#00D4FF" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18l5-6 4 4 6-9"/><path d="M3 21h18"/></svg>
-                    </div>
-                    <div>
-                        <span class="step-label">Passo 2</span>
-                        <h4>Mostramos onde está a oportunidade</h4>
-                    </div>
-                </div>
-                <div class="step-link">
-                    <svg width="13" height="20" viewBox="0 0 14 22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 2v17M2 14l5 5 5-5"/></svg>
-                </div>
-                <div class="step-card active">
-                    <div class="step-ico">
-                        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#00D4FF" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z"/></svg>
-                    </div>
-                    <div>
-                        <span class="step-label">Passo 3</span>
-                        <h4>Escalamos o que provou retorno</h4>
-                    </div>
-                </div>
-            </div>
+  <div class="shell">
+    <div class="hero-grid">
+      <div>
+        <p class="mono">Ecossistema integrado de growth B2B</p>
+        <h1 style="margin-top:1rem">Tráfego avançado não salva processo comercial quebrado. <em>Nós resolvemos os dois.</em></h1>
+        <p class="sub">Paramos de apenas gerar cliques. Unimos <strong style="color:var(--white);font-weight:600">tráfego pago de alta performance</strong>, <strong style="color:var(--white);font-weight:600">landing pages de extrema velocidade</strong>, <strong style="color:var(--white);font-weight:600">API oficial de WhatsApp</strong> e <strong style="color:var(--white);font-weight:600">treinamento de vendas</strong> integrado ao seu CRM. Leads qualificados de verdade e equipe comercial produtiva.</p>
+        <div class="trust">
+          <span class="trust-item">
+            <img src="assets/icon-verified.png" width="28" height="28" alt="">
+            Investidor da maior assessoria de marketing do país
+          </span>
+          <span class="trust-item">
+            <img src="assets/icon-speed.png" width="28" height="28" alt="">
+            Carregamento em &lt; 1.8s · foco em conversão B2B
+          </span>
         </div>
+        <div class="hero-cta">
+          <a href="#caminhos" class="btn btn-primary">
+            Escolher meu caminho
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a href="#contato" class="btn btn-ghost js-path" data-path="diagnostico">Agendar diagnóstico</a>
+          <span class="micro">Sessão individual de 25 minutos com análise de anúncios e funil de vendas. Sem compromisso.</span>
+        </div>
+      </div>
+
+      <div class="eco" aria-hidden="true">
+        <div class="eco-step">
+          <img src="assets/icon-attract.png" width="48" height="48" alt="" loading="lazy">
+          <div>
+            <small>01 · Atração</small>
+            <h4>Tráfego &amp; SEO</h4>
+          </div>
+        </div>
+        <div class="eco-arrow">
+          <svg width="13" height="20" viewBox="0 0 14 22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M7 2v17M2 14l5 5 5-5"/></svg>
+        </div>
+        <div class="eco-step">
+          <img src="assets/icon-convert.png" width="48" height="48" alt="" loading="lazy">
+          <div>
+            <small>02 · Conversão</small>
+            <h4>API WhatsApp &amp; LPs</h4>
+          </div>
+        </div>
+        <div class="eco-arrow">
+          <svg width="13" height="20" viewBox="0 0 14 22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M7 2v17M2 14l5 5 5-5"/></svg>
+        </div>
+        <div class="eco-step">
+          <img src="assets/icon-close.png" width="48" height="48" alt="" loading="lazy">
+          <div>
+            <small>03 · Fechamento</small>
+            <h4>CRM &amp; treinamentos</h4>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 </section>
 
 <div class="ticker" aria-hidden="true">
-    <div class="ticker-track">
-        <span>Rastreamento auditável</span>
-        <span>Ciclo semanal de leitura</span>
-        <span>Custo por cliente, não por clique</span>
-        <span>Teste por hipótese</span>
-        <span>Verba realocada, não queimada</span>
-        <span>Rastreamento auditável</span>
-        <span>Ciclo semanal de leitura</span>
-        <span>Custo por cliente, não por clique</span>
-        <span>Teste por hipótese</span>
-        <span>Verba realocada, não queimada</span>
-    </div>
+  <div class="ticker-track">
+    <span>Tráfego de alta performance</span>
+    <span>Landing pages &lt; 1.8s</span>
+    <span>API oficial de WhatsApp</span>
+    <span>CRM ativo</span>
+    <span>Treinamento comercial</span>
+    <span>Tráfego de alta performance</span>
+    <span>Landing pages &lt; 1.8s</span>
+    <span>API oficial de WhatsApp</span>
+    <span>CRM ativo</span>
+    <span>Treinamento comercial</span>
+  </div>
 </div>
 
-<!-- ══════════ PROBLEMA ══════════ -->
-<section id="problema">
-    <div class="shell">
-        <div class="section-head reveal">
-            <span class="kicker red">O problema</span>
-            <h2>Isso te soa<br>familiar?</h2>
-            <p class="lead">Não importa se você já investe em tráfego pago ou ainda está decidindo por onde começar. O problema costuma ser sempre o mesmo: falta clareza sobre o que realmente traz cliente.</p>
-        </div>
-
-        <div class="problem-grid">
-            <div class="pain-list reveal">
-                <div class="pain">
-                    <svg class="pain-ico" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 20h18M6 20V9M11 20V4M16 20v-7"/><path d="M3 4l18 16"/></svg>
-                    <div>
-                        <h4>Relatório bonito, caixa vazio</h4>
-                        <p>Alcance, impressão e engajamento não pagam folha. Você recebe métrica de vaidade e nenhuma leitura de receita.</p>
-                    </div>
-                </div>
-                <div class="pain">
-                    <svg class="pain-ico" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.6 2.6 0 015 .9c0 1.8-2.5 2.3-2.5 4"/><path d="M12 17.5v.01"/></svg>
-                    <div>
-                        <h4>Ninguém explica o porquê</h4>
-                        <p>Quando o resultado cai vem a justificativa genérica: "o algoritmo mudou". Sem hipótese, sem teste, sem plano de correção.</p>
-                    </div>
-                </div>
-                <div class="pain">
-                    <svg class="pain-ico" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h18l-7 8v7l-4 2v-9L3 4z"/></svg>
-                    <div>
-                        <h4>Enquanto isso, o concorrente aparece</h4>
-                        <p>Quem já resolveu tráfego pago aparece primeiro: no Google, no Instagram, na cabeça do cliente. Cada mês sem estratégia é audiência migrando pro concorrente.</p>
-                    </div>
-                </div>
-                <div class="pain">
-                    <svg class="pain-ico" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><path d="M4 4l16 16"/></svg>
-                    <div>
-                        <h4>Verba investida no escuro</h4>
-                        <p>Você não sabe qual campanha, qual criativo e qual palavra-chave sustentam o faturamento, nem quais estão só consumindo orçamento.</p>
-                    </div>
-                </div>
-            </div>
-
-            <aside class="verdict reveal">
-                <p>
-                    Na maior parte das empresas o problema não é falta de oportunidade.
-                    É a <span class="rd">falta de clareza</span> sobre o que fazer primeiro.
-                    Informação existe de sobra: o que falta é alguém traduzir isso em
-                    <span class="cy">decisão de negócio</span>.
-                </p>
-                <a href="#contato" class="btn btn-primary">
-                    Quero enxergar meus números
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-                </a>
-            </aside>
-        </div>
+<section id="caminhos">
+  <div class="shell">
+    <div class="section-head center reveal">
+      <span class="kicker mono">Bifurcação de consciência</span>
+      <h2>Por onde você entra?</h2>
+      <p class="lead">Dois caminhos. O mesmo diagnóstico. Escolha o que descreve o seu momento — a conversa muda a partir daí.</p>
     </div>
+
+    <div class="split">
+      <article class="path path-a reveal js-path" data-path="comecar">
+        <div class="path-head">
+          <img src="assets/icon-start.png" width="56" height="56" alt="" loading="lazy">
+          <div>
+            <p class="label">Caminho A · Quero começar</p>
+            <p class="who">Ainda não invisto em tráfego</p>
+          </div>
+        </div>
+        <h3>Construa uma máquina de vendas previsível do absoluto zero</h3>
+        <p>Se você quer parar de depender de indicações ou do boca a boca, estruturamos a máquina de atração do zero. Sem jargão, sem milagre. Anúncios, páginas limpas e atendimento de leads para faturar com segurança.</p>
+        <ul class="bullets">
+          <li>
+            <img src="assets/icon-budget.png" width="36" height="36" alt="" loading="lazy">
+            <span><strong>Orçamento seguro</strong>Iniciamos com testes de baixo orçamento até validar o público-alvo.</span>
+          </li>
+          <li>
+            <img src="assets/icon-lp.png" width="36" height="36" alt="" loading="lazy">
+            <span><strong>Estrutura pronta</strong>Criamos landing pages e integrações sem você precisar entender de tecnologia.</span>
+          </li>
+          <li>
+            <img src="assets/icon-train.png" width="36" height="36" alt="" loading="lazy">
+            <span><strong>Processo mastigado</strong>Ensinamos exatamente como o atendente deve qualificar o lead no WhatsApp.</span>
+          </li>
+        </ul>
+        <a href="#contato" class="btn btn-primary">Começar do jeito seguro</a>
+      </article>
+
+      <article class="path path-b reveal js-path" data-path="acelerar">
+        <div class="path-head">
+          <img src="assets/icon-audit.png" width="56" height="56" alt="" loading="lazy">
+          <div>
+            <p class="label">Caminho B · Quero acelerar</p>
+            <p class="who">Já invisto, mas sem resultado</p>
+          </div>
+        </div>
+        <h3>Audite seus anúncios e pare de rasgar dinheiro com leads frios</h3>
+        <p>Chega de relatório de cliques com caixa vazio. Auditamos as contas, limpamos o tráfego ruim, integramos o CRM com a API oficial do WhatsApp e treinamos o time para fechar mais.</p>
+        <ul class="bullets">
+          <li>
+            <img src="assets/icon-audit.png" width="36" height="36" alt="" loading="lazy">
+            <span><strong>Auditoria de contas</strong>Encontramos os gargalos ocultos nos gerenciadores de anúncios.</span>
+          </li>
+          <li>
+            <img src="assets/icon-filter.png" width="36" height="36" alt="" loading="lazy">
+            <span><strong>Tecnologia de filtro</strong>Formulários com enriquecimento de dados e qualificação avançada.</span>
+          </li>
+          <li>
+            <img src="assets/icon-sync.png" width="36" height="36" alt="" loading="lazy">
+            <span><strong>Sincronia comercial</strong>Treinamento, roteiros e CRM ativo para rastrear cada centavo investido.</span>
+          </li>
+        </ul>
+        <a href="#contato" class="btn btn-red">Auditar meus anúncios agora</a>
+      </article>
+    </div>
+  </div>
 </section>
 
-<!-- ══════════ SOLUCAO ══════════ -->
-<section id="solucao">
-    <div class="shell">
-        <div class="section-head center reveal">
-            <span class="kicker">A solução</span>
-            <h2>A <span class="wm">amaral<span class="dot">.ads</span></span> existe<br>pra resolver <em>isso</em></h2>
-            <p class="lead">Não vendemos postagem nem relatório. Conduzimos a mídia como operação: hipótese, teste, leitura e decisão, em ciclo curto, com você entendendo cada passo.</p>
+<section id="quem" style="padding-top:0">
+  <div class="shell">
+    <article class="founder reveal">
+      <div class="founder-photo">
+        <figure class="founder-video" id="siteVideoWrap">
+          <video id="siteVideo" poster="assets/bio-video-poster.jpg" playsinline preload="metadata" controlslist="nodownload">
+            <source src="assets/bio-video.mp4" type="video/mp4">
+          </video>
+          <button type="button" class="video-play" id="playSite" aria-label="Reproduzir vídeo">
+            <span class="play" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+            </span>
+          </button>
+        </figure>
+      </div>
+      <div class="founder-copy">
+        <span class="kicker mono">Quem conduz</span>
+        <h2>Clientes tradicionais compram de gente com rosto.</h2>
+        <p>Luiz Amaral é investidor da maior assessoria de marketing do país. A tese da amaral.ads nasce do maior gargalo que ele viu em empresas brasileiras: anúncio bonito e comercial desconectado. O trabalho aqui não termina no clique — termina no faturamento.</p>
+        <p>Por isso o diagnóstico olha os dois lados: a conta de anúncios e o funil de vendas. Sem métrica de vaidade. Sem “o algoritmo mudou”.</p>
+        <div class="founder-meta">
+          <span class="pill">Investidor da maior assessoria do país</span>
+          <span class="pill">Growth B2B de ponta a ponta</span>
+          <span class="pill">Foco em ROI real</span>
         </div>
-
-        <div class="pillars">
-            <article class="pillar reveal">
-                <div class="pillar-ico">
-                    <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#00D4FF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>
-                </div>
-                <h3>Dado antes de opinião</h3>
-                <p>Rastreamento, conversões e nomenclatura estruturados desde o dia zero. Toda decisão nasce de um número que dá pra abrir e conferir na frente de você.</p>
-            </article>
-            <article class="pillar reveal">
-                <div class="pillar-ico">
-                    <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#00D4FF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M2 12h4M18 12h4M5 5l3 3M16 16l3 3M19 5l-3 3M8 16l-3 3"/><circle cx="12" cy="12" r="3.2"/></svg>
-                </div>
-                <h3>Operação, não postagem</h3>
-                <p>Rotina de testes, cortes e realocação de verba. Campanha viva, revisada em ciclo curto, não uma estrutura que fica meses no piloto automático.</p>
-            </article>
-            <article class="pillar reveal">
-                <div class="pillar-ico">
-                    <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#00D4FF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
-                </div>
-                <h3>Conversa de dono</h3>
-                <p>Reunião de performance em linguagem de negócio: custo de aquisição, receita e margem. Jargão de plataforma fica no bastidor, onde deve ficar.</p>
-            </article>
-        </div>
-    </div>
+      </div>
+    </article>
+  </div>
 </section>
 
-<!-- ══════════ COMO FUNCIONA ══════════ -->
-<section class="flow" id="processo">
-    <div class="shell">
-        <div class="section-head center reveal">
-            <span class="kicker">Como funciona</span>
-            <h2>Do diagnóstico<br>à escala</h2>
-            <p class="lead">Quatro etapas, nessa ordem. Ninguém aumenta investimento antes do canal provar que devolve.</p>
-        </div>
-
-        <div class="timeline">
-            <div class="node reveal">
-                <div class="node-dot">1</div>
-                <h4>Diagnóstico</h4>
-                <p>Entendimento do seu momento, funil e oportunidade real. Antes de qualquer investimento, saber onde focar.</p>
-            </div>
-            <div class="node reveal">
-                <div class="node-dot">2</div>
-                <h4>Estrutura</h4>
-                <p>Contas, conversões, públicos e criativos organizados pra medir de verdade.</p>
-            </div>
-            <div class="node reveal">
-                <div class="node-dot">3</div>
-                <h4>Operação</h4>
-                <p>Ciclos de teste, leitura semanal e verba realocada pro que está performando.</p>
-            </div>
-            <div class="node reveal">
-                <div class="node-dot">4</div>
-                <h4>Escala</h4>
-                <p>Ampliação de investimento apoiada em histórico, não em otimismo.</p>
-            </div>
-        </div>
-
-        <div style="text-align:center; margin-top:clamp(2.5rem,5vw,3.5rem);" class="reveal">
-            <a href="#contato" class="btn btn-primary">
-                Começar pelo diagnóstico
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-            </a>
-        </div>
+<section id="metodo" style="padding-top:0">
+  <div class="shell">
+    <div class="section-head center reveal">
+      <span class="kicker mono">Os 3 pilares do growth</span>
+      <h2>O modelo de agência faliu. O ecossistema não.</h2>
+      <p class="lead">Tráfego sozinho não fecha. CRM sozinho não atrai. Os três pilares precisam rodar juntos.</p>
     </div>
+
+    <div class="flow-line reveal">
+      <div class="flow-chip">
+        <img src="assets/icon-attract.png" width="44" height="44" alt="" loading="lazy">
+        <strong>Atração inteligente</strong>
+        <span>Tráfego &amp; SEO</span>
+      </div>
+      <span class="flow-eq" aria-hidden="true">→</span>
+      <div class="flow-chip">
+        <img src="assets/icon-convert.png" width="44" height="44" alt="" loading="lazy">
+        <strong>Conversão tecnológica</strong>
+        <span>API WhatsApp &amp; LPs</span>
+      </div>
+      <span class="flow-eq" aria-hidden="true">→</span>
+      <div class="flow-chip">
+        <img src="assets/icon-close.png" width="44" height="44" alt="" loading="lazy">
+        <strong>Fechamento comercial</strong>
+        <span>CRM &amp; treinamentos</span>
+      </div>
+    </div>
+
+    <div class="pillars">
+      <article class="pillar reveal">
+        <img src="assets/icon-attract.png" width="56" height="56" alt="" loading="lazy">
+        <h3>Atração de alta precisão</h3>
+        <p>Gerenciamento cirúrgico de Meta Ads, Google Ads e SEO B2B. Criativos nas dores do ICP — só clica quem tem interesse e poder de compra.</p>
+        <p class="why"><strong style="color:var(--white)">Por que funciona.</strong> Não buscamos clique. Buscamos o cliente certo na frente da oferta certa.</p>
+      </article>
+      <article class="pillar reveal">
+        <img src="assets/icon-convert.png" width="56" height="56" alt="" loading="lazy">
+        <h3>Conversão tecnológica</h3>
+        <p>Landing pages otimizadas para mobile e automação via API oficial do WhatsApp. Página lenta mata metade do clique antes de ver o telefone.</p>
+        <p class="why"><strong style="color:var(--white)">Por que funciona.</strong> Páginas leves, abaixo de 2s, ligadas a fluxos que respondem em milissegundos.</p>
+      </article>
+      <article class="pillar reveal">
+        <img src="assets/icon-close.png" width="56" height="56" alt="" loading="lazy">
+        <h3>Fechamento e CRM</h3>
+        <p>Implementação de ActiveCampaign, RD Station, Kommo ou Pipedrive, roteiros sob medida e treino prático da equipe comercial.</p>
+        <p class="why"><strong style="color:var(--white)">Por que funciona.</strong> Lead na planilha não paga conta. Abordagem ativa, funil vivo, nenhum contato esquecido.</p>
+      </article>
+    </div>
+  </div>
 </section>
 
-<!-- ══════════ COMPARATIVO ══════════ -->
-<section id="modelo">
-    <div class="shell">
-        <div class="section-head center reveal">
-            <span class="kicker">Por que trabalhar com a gente</span>
-            <h2>Nosso modelo<br>é diferente</h2>
-            <p class="lead">A diferença não está na ferramenta: todo mundo usa as mesmas. Está no que se faz com o que ela mostra.</p>
-        </div>
-
-        <div class="table-wrap reveal">
-            <table>
-                <thead>
-                    <tr>
-                        <th style="width:26%">Critério</th>
-                        <th style="width:37%">Mercado</th>
-                        <th style="width:37%"><span class="wm">amaral.ads</span></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="crit">Entrega mensal</td>
-                        <td class="other"><span class="mark"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FF2D2D" stroke-width="2.6" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg> Print de métrica de plataforma</span></td>
-                        <td class="ours"><span class="mark"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#00D4FF" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Leitura de custo de aquisição e receita</span></td>
-                    </tr>
-                    <tr>
-                        <td class="crit">Rastreamento</td>
-                        <td class="other"><span class="mark"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FF2D2D" stroke-width="2.6" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg> Herda o que já estava configurado</span></td>
-                        <td class="ours"><span class="mark"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#00D4FF" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Auditado e reestruturado antes de escalar</span></td>
-                    </tr>
-                    <tr>
-                        <td class="crit">Rotina</td>
-                        <td class="other"><span class="mark"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FF2D2D" stroke-width="2.6" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg> Contato só no fechamento do mês</span></td>
-                        <td class="ours"><span class="mark"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#00D4FF" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Ciclo curto de revisão e ajuste</span></td>
-                    </tr>
-                    <tr>
-                        <td class="crit">Criativo</td>
-                        <td class="other"><span class="mark"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FF2D2D" stroke-width="2.6" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg> Sobe o que o cliente mandar</span></td>
-                        <td class="ours"><span class="mark"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#00D4FF" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Teste estruturado por hipótese</span></td>
-                    </tr>
-                    <tr>
-                        <td class="crit">Interlocução</td>
-                        <td class="other"><span class="mark"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FF2D2D" stroke-width="2.6" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg> Fala em CTR, CPM e alcance</span></td>
-                        <td class="ours"><span class="mark"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#00D4FF" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Fala em cliente conquistado e retorno</span></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+<section id="dados" style="padding-top:0">
+  <div class="shell">
+    <div class="section-head center reveal">
+      <span class="kicker mono">Mockups de operação</span>
+      <h2>Decisão com dado na mesa.</h2>
+      <p class="lead">Cliente avançado não compra discurso. Compra funil visível e conta de anúncio lida com critério.</p>
     </div>
+    <div class="mock-grid">
+      <figure class="mock reveal">
+        <img src="assets/mockup-crm.jpg" width="1400" height="788" alt="Painel de CRM com funil de vendas ativo: Novo, Qualificado, Diagnóstico, Proposta e Fechado" loading="lazy" decoding="async">
+        <figcaption>
+          <strong>CRM com funil vivo</strong>
+          Cada lead em uma etapa. Nada esquecido no WhatsApp pessoal do vendedor.
+        </figcaption>
+      </figure>
+      <figure class="mock reveal">
+        <img src="assets/mockup-ads.jpg" width="1400" height="788" alt="Painel de gerenciador de anúncios com ROAS, CPA e campanhas de conversão B2B" loading="lazy" decoding="async">
+        <figcaption>
+          <strong>Gerenciador de anúncios limpo</strong>
+          Campanha que paga e campanha que queima — lado a lado, sem métrica de vaidade.
+        </figcaption>
+      </figure>
+    </div>
+  </div>
 </section>
 
-<!-- ══════════ PRA QUEM ══════════ -->
-<section class="fit" id="pra-quem">
-    <div class="shell">
-        <div class="fit-grid">
-            <div class="reveal">
-                <span class="kicker">Pra quem é</span>
-                <h2>Pra quem quer<br>aparecer e vender</h2>
-                <p class="lead">Não precisa já ter uma operação de mídia rodando. Precisa ter um negócio de verdade e vontade de crescer com método. A conversa flui quando você tem:</p>
-                <div class="checks">
-                    <div class="check">
-                        <span class="check-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#00D4FF" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>
-                        <span>Um produto ou serviço real pra oferecer</span>
-                    </div>
-                    <div class="check">
-                        <span class="check-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#00D4FF" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>
-                        <span>Alguém do outro lado pra atender a demanda gerada</span>
-                    </div>
-                    <div class="check">
-                        <span class="check-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#00D4FF" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>
-                        <span>Disposição pra investir em marketing com método, mesmo começando agora</span>
-                    </div>
-                    <div class="check">
-                        <span class="check-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#00D4FF" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>
-                        <span>Disposição pra decidir com dado, mesmo contra o achismo</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="scope reveal">
-                <div class="scope-card">
-                    <svg class="scope-ico" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
-                    <h4>Google Ads</h4>
-                    <p>Captura de demanda existente: pesquisa, performance máxima e remarketing conectados ao funil comercial.</p>
-                </div>
-                <div class="scope-card">
-                    <svg class="scope-ico" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 2H7a5 5 0 00-5 5v10a5 5 0 005 5h10a5 5 0 005-5V7a5 5 0 00-5-5z"/><circle cx="12" cy="12" r="3.6"/><path d="M17.5 6.5v.01"/></svg>
-                    <h4>Meta Ads</h4>
-                    <p>Geração de demanda no Facebook e Instagram: públicos, criativos e sequência de remarketing testados por hipótese.</p>
-                </div>
-                <div class="scope-card">
-                    <svg class="scope-ico" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-5 3 3 5-7"/></svg>
-                    <h4>Medição e rastreamento</h4>
-                    <p>GA4, tags e eventos de conversão configurados pra que o número da plataforma converse com o número do caixa.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ══════════ FAQ ══════════ -->
 <section id="faq">
-    <div class="shell">
-        <div class="section-head center reveal">
-            <span class="kicker">FAQ</span>
-            <h2>Perguntas frequentes</h2>
-            <p class="lead">O que costuma aparecer na primeira conversa.</p>
-        </div>
-
-        <div class="faq-list reveal">
-            <details class="faq">
-                <summary>
-                    O diagnóstico inicial tem custo?
-                    <svg class="plus" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
-                </summary>
-                <!-- [CONFIRMAR] politica comercial -->
-                <div class="faq-body">A primeira conversa é de entendimento: olhamos suas contas, seu funil e seu objetivo pra dizer se faz sentido trabalharmos juntos. Se não fizer, a gente fala na hora.</div>
-            </details>
-            <details class="faq">
-                <summary>
-                    Existe investimento mínimo em mídia?
-                    <svg class="plus" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
-                </summary>
-                <!-- [CONFIRMAR] valor minimo -->
-                <div class="faq-body">Depende do seu mercado e do ciclo de venda. O que definimos junto no diagnóstico é o piso necessário pra gerar volume de dado suficiente pra decidir. Abaixo disso, a operação vira aposta.</div>
-            </details>
-            <details class="faq">
-                <summary>
-                    Em quanto tempo aparece resultado?
-                    <svg class="plus" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
-                </summary>
-                <!-- [CONFIRMAR] prazo praticado -->
-                <div class="faq-body">Os primeiros ciclos servem pra estruturar medição e aprender o que converte. Sinal de tração aparece antes; previsibilidade de custo por cliente exige histórico. Prazo real a gente estima no diagnóstico, com o seu cenário na mesa.</div>
-            </details>
-            <details class="faq">
-                <summary>
-                    Vocês produzem os criativos?
-                    <svg class="plus" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
-                </summary>
-                <!-- [CONFIRMAR] escopo de criacao -->
-                <div class="faq-body">Definimos a hipótese, o roteiro e o que precisa ser testado em cada rodada. O escopo de produção é combinado caso a caso. O que não muda é que criativo entra no ar pra responder uma pergunta, não pra preencher calendário.</div>
-            </details>
-            <details class="faq">
-                <summary>
-                    Preciso dar acesso às minhas contas?
-                    <svg class="plus" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
-                </summary>
-                <div class="faq-body">Sim, e as contas continuam sendo suas. Trabalhamos dentro do seu Google Ads e do seu Meta Business, com acesso concedido por você e revogável a qualquer momento. Histórico e dados nunca ficam reféns da agência.</div>
-            </details>
-        </div>
-
-        <div class="faq-foot reveal">
-            <p>Ficou alguma dúvida de fora? Pergunta direto pra gente.</p>
-            <a href="#contato" class="btn btn-ghost js-wpp">
-                Falar com um especialista
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-            </a>
-        </div>
+  <div class="shell">
+    <div class="section-head center reveal">
+      <span class="kicker mono">FAQ inteligente</span>
+      <h2>Objeções de 2026, respondidas.</h2>
+      <p class="lead">As cinco perguntas que travam o diagnóstico — dos dois perfis.</p>
     </div>
+    <div class="faq-list reveal">
+      <details class="faq">
+        <summary>Quanto preciso investir em anúncios de início?<svg class="plus" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></summary>
+        <div class="faq-body">O investimento é proporcional ao tamanho do seu mercado e à sua meta de vendas. Para empresas iniciantes, recomendamos começar de forma enxuta para validar a oferta antes de acelerar. Para empresas maduras, analisamos o Custo de Aquisição de Clientes (CAC) ideal para escalar com segurança.</div>
+      </details>
+      <details class="faq">
+        <summary>Eu já tenho um time comercial / vendedor. Como vocês ajudam?<svg class="plus" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></summary>
+        <div class="faq-body">Nós não substituímos seu time comercial, nós o tornamos 3x mais produtivo. Fornecemos os roteiros de criativos, scripts de abordagem rápidos para o WhatsApp e organizamos o funil do CRM para que seus vendedores saibam exatamente para quem ligar e como conduzir o fechamento.</div>
+      </details>
+      <details class="faq">
+        <summary>Em quanto tempo começamos a ver os leads chegando?<svg class="plus" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></summary>
+        <div class="faq-body">A estrutura inicial de tráfego e landing pages premium é implementada em até 15 dias. Uma vez ativos os anúncios, os leads começam a entrar em até 48 horas. A otimização fina do funil ocorre nas semanas seguintes com base em dados de vendas reais.</div>
+      </details>
+      <details class="faq">
+        <summary>Minha equipe não sabe usar CRM. O que eu faço?<svg class="plus" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></summary>
+        <div class="faq-body">Nós fazemos a configuração técnica completa, desenhamos as etapas de vendas no CRM e oferecemos um treinamento prático e didático para a sua equipe comercial. Deixamos a ferramenta pronta e fácil para que seu time só precise mover os cards e registrar as vendas.</div>
+      </details>
+      <details class="faq">
+        <summary>Qual a diferença entre a Amaral Ads e uma agência de marketing comum?<svg class="plus" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></summary>
+        <div class="faq-body">Agências comuns entregam relatórios de cliques e dizem que o trabalho delas acabou. Nós somos uma assessoria de Growth. Nos envolvemos diretamente com o seu faturamento: analisamos desde o clique do anúncio até a velocidade da página, a resposta da automação do WhatsApp e a taxa de fechamento dos seus vendedores.</div>
+      </details>
+    </div>
+  </div>
 </section>
 
-<!-- ══════════ CTA FINAL + FORM ══════════ -->
 <section class="final" id="contato">
-    <canvas id="netBg2" style="position:absolute;inset:0;width:100%;height:100%;z-index:0;pointer-events:none;opacity:.45"></canvas>
-    <div class="shell">
-        <div class="final-grid">
-            <div class="final-copy reveal">
-                <span class="kicker">Diagnóstico</span>
-                <h2>Pronto pra saber pra onde vai <em>cada real</em>?</h2>
-                <p>Preenche o formulário. Em uma conversa a gente aponta o que fazer primeiro pra sua empresa aparecer mais e vender melhor.</p>
-                <ul class="final-points">
-                    <li>
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
-                        Sem compromisso: a primeira conversa é de entendimento
-                    </li>
-                    <li>
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
-                        Resposta em horário comercial, direto com um especialista
-                    </li>
-                    <li>
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
-                        Contas continuam suas: a gente opera com acesso concedido
-                    </li>
-                </ul>
+  <div class="shell">
+    <div class="final-grid">
+      <div class="final-copy">
+        <span class="kicker mono">Diagnóstico comercial gratuito</span>
+        <h2>25 minutos. Anúncios e funil na mesma mesa.</h2>
+        <p>Sem compromisso. A sessão aponta o que fazer primeiro — começar do zero com segurança ou auditar o que já queima verba.</p>
+        <ul class="final-points">
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+            Sessão individual de 25 minutos
+          </li>
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+            Análise de anúncios e funil de vendas
+          </li>
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+            Resposta em horário comercial, direto com o especialista
+          </li>
+        </ul>
+      </div>
+
+      <form class="lead-form" id="leadForm" novalidate>
+        <div class="form-fields">
+          <ol class="lead-steps" aria-label="Caminho do lead">
+            <li id="stepPath">1. Caminho</li>
+            <li id="stepDados" class="is-on">2. Dados</li>
+            <li id="stepWpp">3. WhatsApp</li>
+          </ol>
+          <div class="form-head">
+            <h3>Agendar diagnóstico</h3>
+            <p>Quatro campos. A gente retorna pelo WhatsApp.</p>
+          </div>
+          <p class="path-chip" id="pathChip" hidden></p>
+          <input type="hidden" name="caminho" id="campoCaminho" value="diagnostico">
+
+          <div class="field-row">
+            <div class="field">
+              <label>Seu nome <span class="req">*</span></label>
+              <input type="text" name="nome" placeholder="Nome completo" autocomplete="name" required>
             </div>
+            <div class="field">
+              <label>WhatsApp <span class="req">*</span></label>
+              <input type="tel" name="whatsapp" placeholder="(00) 00000-0000" autocomplete="tel" required>
+            </div>
+          </div>
+          <div class="field">
+            <label>Nome da empresa <span class="req">*</span></label>
+            <input type="text" name="empresa" placeholder="Nome da sua empresa" required>
+          </div>
+          <div class="field">
+            <label>Sua situação <span class="req">*</span></label>
+            <select name="situacao" id="campoSituacao" required>
+              <option value="" disabled selected>Selecione o caminho...</option>
+              <option value="comecar">Ainda não invisto em tráfego — quero começar</option>
+              <option value="acelerar">Já invisto, mas sem resultado — quero acelerar</option>
+            </select>
+          </div>
+          <input type="hidden" name="email" value="">
+          <input type="hidden" name="investimento" id="campoInvestimento" value="">
+          <input type="hidden" name="site" value="">
+          <input type="hidden" name="desafio" value="">
 
-            <form class="lead-form reveal" id="leadForm" novalidate>
-                <div class="form-fields">
-                    <div class="form-head">
-                        <h3>Peça seu diagnóstico</h3>
-                        <p>Leva menos de 1 minuto. A gente retorna pelo WhatsApp.</p>
-                    </div>
-
-                    <div class="field-row">
-                        <div class="field">
-                            <label>Seu nome <span class="req">*</span></label>
-                            <input type="text" name="nome" placeholder="Nome completo" autocomplete="name" required>
-                        </div>
-                        <div class="field">
-                            <label>WhatsApp <span class="req">*</span></label>
-                            <input type="tel" name="whatsapp" placeholder="(00) 00000-0000" autocomplete="tel" required>
-                        </div>
-                    </div>
-
-                    <div class="field-row">
-                        <div class="field">
-                            <label>E-mail <span class="req">*</span></label>
-                            <input type="email" name="email" placeholder="seu@email.com" autocomplete="email" required>
-                        </div>
-                        <div class="field">
-                            <label>Nome da empresa <span class="req">*</span></label>
-                            <input type="text" name="empresa" placeholder="Nome da sua empresa" required>
-                        </div>
-                    </div>
-
-                    <div class="field-row">
-                        <div class="field">
-                            <label>Segmento <span class="req">*</span></label>
-                            <select name="segmento" required>
-                                <option value="" disabled selected>Selecione...</option>
-                                <option>E-commerce / Loja Virtual</option>
-                                <option>Serviços</option>
-                                <option>Saúde / Estética</option>
-                                <option>Educação</option>
-                                <option>Alimentação</option>
-                                <option>Moda / Vestuário</option>
-                                <option>Tecnologia</option>
-                                <option>Imobiliário</option>
-                                <option>Industrial / B2B</option>
-                                <option>Financeiro</option>
-                                <option>Outro</option>
-                            </select>
-                        </div>
-                        <div class="field">
-                            <label>Investimento em mídia <span class="req">*</span></label>
-                            <select name="investimento" required>
-                                <option value="" disabled selected>Selecione...</option>
-                                <option>Não invisto ainda</option>
-                                <option>Até R$ 2.000/mês</option>
-                                <option>R$ 2.000 a R$ 5.000/mês</option>
-                                <option>R$ 5.000 a R$ 10.000/mês</option>
-                                <option>R$ 10.000 a R$ 20.000/mês</option>
-                                <option>Mais de R$ 20.000/mês</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div class="field">
-                        <label>Site ou Instagram <span class="opt">(opcional)</span></label>
-                        <input type="text" name="site" placeholder="https://seusite.com.br ou @seuinstagram">
-                    </div>
-
-                    <div class="field">
-                        <label>Qual seu maior desafio hoje? <span class="opt">(opcional)</span></label>
-                        <textarea name="desafio" placeholder="Conte brevemente o que está travando o crescimento..."></textarea>
-                    </div>
-
-                    <button type="submit" class="btn btn-primary" id="leadSubmit">
-                        Quero meu diagnóstico
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-                    </button>
-                    <p class="form-note">Ao enviar, abrimos o WhatsApp com seus dados pra gente continuar a conversa.</p>
-                </div>
-
-                <div class="form-success" id="formSuccess">
-                    <div class="ok-ico">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00D4FF" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
-                    </div>
-                    <h3>Recebido.</h3>
-                    <p>Se o WhatsApp não abriu, toca no botão abaixo. A mensagem já vai montada.</p>
-                    <a href="#" class="btn btn-primary js-wpp" id="formWppFallback">
-                        Abrir WhatsApp
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-                    </a>
-                </div>
-            </form>
+          <button type="submit" class="btn btn-primary" id="leadSubmit">
+            Agendar diagnóstico gratuito
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </button>
+          <p class="form-note">Ao enviar, abrimos o WhatsApp com a mensagem pronta. Sem compromisso.</p>
         </div>
+
+        <div class="form-success" id="formSuccess">
+          <div class="ok-ico">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00D4FF" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+          </div>
+          <h3>Recebido.</h3>
+          <p>Se o WhatsApp não abriu, toca no botão abaixo. A mensagem já vai montada.</p>
+          <a href="#" class="btn btn-primary js-wpp" id="formWppFallback">
+            Abrir WhatsApp
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </form>
     </div>
+  </div>
 </section>
 
-<!-- ══════════ FOOTER ══════════ -->
 <footer>
-    <div class="foot-grid">
-        <div class="foot-about">
-            <a href="#topo" class="brand">
-                <svg class="brand-mark" viewBox="0 0 100 100" fill="none" aria-hidden="true">
-                    <g stroke="#00D4FF" stroke-width="3" stroke-linecap="round">
-                        <path d="M10 54 L44 60 M10 54 L30 84 M10 54 L62 32 M30 84 L44 60 M44 60 L62 32 M44 60 L74 66 M62 32 L74 66"/>
-                    </g>
-                    <g fill="#00D4FF">
-                        <circle cx="10" cy="54" r="5.5"/><circle cx="30" cy="84" r="6"/>
-                        <circle cx="44" cy="60" r="6"/><circle cx="62" cy="32" r="8"/>
-                        <circle cx="74" cy="66" r="6"/>
-                    </g>
-                    <path d="M62 32 L86 10" stroke="#FF2D2D" stroke-width="4" stroke-linecap="round"/>
-                    <path d="M92 4 L74 10 L86 20 Z" fill="#FF2D2D"/>
-                </svg>
-                <span class="brand-txt">
-                    <span class="brand-name">amaral<span class="dot">.ads</span></span>
-                </span>
-            </a>
-            <p>Gestão de tráfego pago pra empresas que querem crescer. Mídia paga conduzida com rastreamento auditável e leitura de negócio.</p>
-        </div>
-        <div class="foot-col">
-            <h5>Navegação</h5>
-            <a href="#problema">O problema</a>
-            <a href="#solucao">Solução</a>
-            <a href="#processo">Como funciona</a>
-            <a href="#faq">Perguntas frequentes</a>
-            <a href="#contato">Diagnóstico</a>
-        </div>
-        <div class="foot-col">
-            <h5>Serviços</h5>
-            <a href="#pra-quem">Google Ads</a>
-            <a href="#pra-quem">Meta Ads</a>
-            <a href="#pra-quem">Medição e rastreamento</a>
-            <a href="#processo">Diagnóstico de conta</a>
-        </div>
-        <div class="foot-col">
-            <h5>Contato</h5>
-            <a href="#contato" class="js-wpp" id="footerWpp">WhatsApp</a>
-            <a href="mailto:amaral.ads.br@gmail.com">amaral.ads.br@gmail.com</a>
-            <a href="https://www.instagram.com/amaral.ads.br/" target="_blank" rel="noopener">Instagram</a>
-        </div>
+  <div class="foot-grid">
+    <div class="foot-about">
+      <a href="#topo" class="brand">
+        <svg class="brand-mark" viewBox="0 0 100 100" fill="none" aria-hidden="true">
+          <g stroke="#00D4FF" stroke-width="3" stroke-linecap="round">
+            <path d="M10 54 L44 60 M10 54 L30 84 M10 54 L62 32 M30 84 L44 60 M44 60 L62 32 M44 60 L74 66 M62 32 L74 66"/>
+          </g>
+          <g fill="#00D4FF">
+            <circle cx="10" cy="54" r="5.5"/><circle cx="30" cy="84" r="6"/>
+            <circle cx="44" cy="60" r="6"/><circle cx="62" cy="32" r="8"/>
+            <circle cx="74" cy="66" r="6"/>
+          </g>
+          <path d="M62 32 L86 10" stroke="#FF2D2D" stroke-width="4" stroke-linecap="round"/>
+          <path d="M92 4 L74 10 L86 20 Z" fill="#FF2D2D"/>
+        </svg>
+        <span class="brand-txt"><span class="brand-name">amaral<span class="dot">.ads</span></span></span>
+      </a>
+      <p>Ecossistema de growth B2B: tráfego, landing pages, API de WhatsApp e comercial no mesmo sistema. Desenhado por investidor da maior assessoria de marketing do país.</p>
     </div>
-    <div class="foot-bottom">
-        <span>© <span id="ano"></span> amaral.ads. Todos os direitos reservados.</span>
-        <span>gestão de tráfego pago</span>
+    <div class="foot-col">
+      <h5>Navegação</h5>
+      <a href="#caminhos">Caminhos</a>
+      <a href="#metodo">Método</a>
+      <a href="#quem">Quem somos</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contato">Diagnóstico</a>
     </div>
+    <div class="foot-col">
+      <h5>Ecossistema</h5>
+      <a href="#metodo">Atração inteligente</a>
+      <a href="#metodo">Conversão tecnológica</a>
+      <a href="#metodo">Fechamento e CRM</a>
+      <a href="bio/">Link na bio</a>
+    </div>
+    <div class="foot-col">
+      <h5>Contato</h5>
+      <a href="#contato" class="js-wpp" id="footerWpp">WhatsApp</a>
+      <a href="mailto:amaral.ads.br@gmail.com">amaral.ads.br@gmail.com</a>
+      <a href="https://www.instagram.com/amaral.ads.br/" target="_blank" rel="noopener">Instagram</a>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span>© <span id="ano"></span> amaral.ads. Todos os direitos reservados.</span>
+    <span>tráfego e performance corporativa</span>
+  </div>
 </footer>
 
 <script src="assets/storage.js"></script>

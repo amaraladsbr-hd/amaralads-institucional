@@ -1,8 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-  MODELO de sitemap — substitua marketing.amaralads.com.br pelo domínio real antes de publicar.
-  Ex.: https://amaralads.com.br
--->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://marketing.amaralads.com.br/</loc>
@@ -10,7 +6,7 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://marketing.amaralads.com.br/bio/</loc>
+    <loc>https://link.amaralads.com.br/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

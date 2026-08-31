@@ -43,12 +43,87 @@
     return 'https://wa.me/' + num + '?text=' + encodeURIComponent(text);
   }
 
-  var DEFAULT_MSG = 'Oi! Vim pela landing page da amaral.ads e quero um diagnóstico da minha operação de tráfego.';
+  var DEFAULT_MSG = 'Oi! Vim pela landing page da amaral.ads e quero agendar o diagnóstico comercial gratuito (25 min — anúncios + funil).';
   Array.prototype.forEach.call(document.querySelectorAll('.js-wpp'), function (el) {
     el.setAttribute('href', wppUrl(DEFAULT_MSG));
     el.setAttribute('target', '_blank');
     el.setAttribute('rel', 'noopener');
   });
+
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  var PATH_LABEL = {
+    comecar: 'Quero começar (ainda não invisto em tráfego)',
+    acelerar: 'Quero acelerar (já invisto, sem resultado)',
+    diagnostico: 'Diagnóstico comercial'
+  };
+  var PATH_CHIP = {
+    comecar: 'Caminho A · ainda não invisto — começar do zero',
+    acelerar: 'Caminho B · já invisto — auditar anúncios',
+    diagnostico: 'Diagnóstico comercial'
+  };
+
+  function applyPath(path) {
+    path = path || 'diagnostico';
+    var hidden = document.getElementById('campoCaminho');
+    var situacao = document.getElementById('campoSituacao');
+    var invest = document.getElementById('campoInvestimento');
+    var chip = document.getElementById('pathChip');
+    var stepPath = document.getElementById('stepPath');
+    var stepDados = document.getElementById('stepDados');
+    if (hidden) hidden.value = path;
+    if (situacao && (path === 'comecar' || path === 'acelerar')) {
+      situacao.value = path;
+      situacao.classList.remove('invalid');
+    }
+    if (invest) invest.value = path === 'comecar' ? 'Não invisto ainda' : '';
+    if (chip) {
+      chip.hidden = false;
+      chip.textContent = PATH_CHIP[path] || PATH_CHIP.diagnostico;
+      chip.classList.toggle('is-b', path === 'acelerar');
+    }
+    if (stepPath && stepDados) {
+      var picked = path === 'comecar' || path === 'acelerar';
+      stepPath.classList.toggle('is-done', picked);
+      stepPath.classList.toggle('is-on', !picked);
+      stepDados.classList.toggle('is-on', picked);
+    }
+    Array.prototype.forEach.call(document.querySelectorAll('.path[data-path]'), function (card) {
+      card.classList.toggle('is-picked', card.getAttribute('data-path') === path);
+    });
+  }
+
+  function goToForm(path) {
+    applyPath(path);
+    var dest = document.getElementById('contato');
+    var form = document.getElementById('leadForm');
+    if (form) form.classList.add('is-armed');
+    if (dest) {
+      var y = dest.getBoundingClientRect().top + window.pageYOffset - 84;
+      window.scrollTo({ top: y, behavior: reduced ? 'auto' : 'smooth' });
+    }
+    var first = form && form.querySelector('input[name="nome"]');
+    if (first) setTimeout(function () { first.focus(); }, 350);
+  }
+
+  Array.prototype.forEach.call(document.querySelectorAll('.js-path'), function (el) {
+    el.addEventListener('click', function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      goToForm(el.getAttribute('data-path') || 'diagnostico');
+    });
+  });
+
+  var situacaoSelect = document.getElementById('campoSituacao');
+  if (situacaoSelect) {
+    situacaoSelect.addEventListener('change', function () {
+      applyPath(situacaoSelect.value || 'diagnostico');
+    });
+  }
+
+  if (location.hash === '#contato') {
+    setTimeout(function () { goToForm('diagnostico'); }, 50);
+  }
 
   // Atualiza e-mail / Instagram do rodapé se settings mudarem
   var mailLink = document.querySelector('a[href^="mailto:"]');
@@ -57,6 +132,26 @@
   if (igLink && settings.instagram) igLink.setAttribute('href', settings.instagram);
 
   document.getElementById('ano').textContent = new Date().getFullYear();
+
+  var siteVideo = document.getElementById('siteVideo');
+  var siteWrap = document.getElementById('siteVideoWrap');
+  var playSite = document.getElementById('playSite');
+  if (siteVideo && siteWrap && playSite) {
+    function setSitePlaying(on) {
+      siteWrap.classList.toggle('is-playing', on);
+      if (on) siteVideo.setAttribute('controls', '');
+      else siteVideo.removeAttribute('controls');
+    }
+    playSite.addEventListener('click', function () {
+      siteVideo.play();
+      setSitePlaying(true);
+    });
+    siteVideo.addEventListener('play', function () { setSitePlaying(true); });
+    siteVideo.addEventListener('ended', function () {
+      setSitePlaying(false);
+      siteVideo.currentTime = 0;
+    });
+  }
 
   /* ─── Header progress ─── */
   var header = document.getElementById('header');
@@ -69,8 +164,6 @@
   }
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
-
-  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   /* ─── Reveal ─── */
   var revealables = document.querySelectorAll('.reveal');
@@ -87,17 +180,6 @@
       });
     }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
     Array.prototype.forEach.call(revealables, function (el) { io.observe(el); });
-  }
-
-  /* ─── Stepper rotation ─── */
-  var cards = document.querySelectorAll('.stepper .step-card');
-  if (cards.length && !reduced) {
-    var idx = 2;
-    setInterval(function () {
-      cards[idx].classList.remove('active');
-      idx = (idx + 1) % cards.length;
-      cards[idx].classList.add('active');
-    }, 2600);
   }
 
   /* ─── Lead form → CRM + WhatsApp + tracking ─── */
@@ -124,13 +206,13 @@
 
   function buildLeadMessage(data) {
     var lines = [
-      'Olá! Vim pela landing page da amaral.ads e quero um diagnóstico.',
+      'Olá! Vim pela landing page da amaral.ads e quero agendar o diagnóstico comercial gratuito.',
       '',
       '*Nome:* ' + data.nome,
       '*WhatsApp:* ' + data.whatsapp,
       '*E-mail:* ' + data.email,
       '*Empresa:* ' + data.empresa,
-      '*Segmento:* ' + data.segmento,
+      '*Caminho:* ' + (PATH_LABEL[data.situacao] || PATH_LABEL[data.caminho] || data.situacao || data.caminho || 'Diagnóstico'),
       '*Investimento em mídia:* ' + data.investimento
     ];
     if (data.site) lines.push('*Site/Instagram:* ' + data.site);
@@ -179,10 +261,11 @@
         whatsapp: form.whatsapp.value.trim(),
         email: form.email.value.trim(),
         empresa: form.empresa.value.trim(),
-        segmento: form.segmento.value,
+        situacao: (form.situacao && form.situacao.value) || '',
+        caminho: (form.caminho && form.caminho.value) || '',
         investimento: form.investimento.value,
-        site: form.site.value.trim(),
-        desafio: form.desafio.value.trim()
+        site: (form.site && form.site.value.trim()) || '',
+        desafio: (form.desafio && form.desafio.value.trim()) || ''
       };
 
       var attribution = AmaralStore.getAttribution();
@@ -191,10 +274,12 @@
         whatsapp: data.whatsapp,
         email: data.email,
         empresa: data.empresa,
-        segmento: data.segmento,
+        segmento: PATH_LABEL[data.situacao] || data.situacao,
         investimento: data.investimento,
         site: data.site,
         desafio: data.desafio,
+        caminho: data.caminho,
+        situacao: data.situacao,
         source: 'lp_form',
         attribution: attribution
       });
@@ -211,6 +296,8 @@
         fallback.setAttribute('rel', 'noopener');
       }
       form.classList.add('is-sent');
+      var stepWpp = document.getElementById('stepWpp');
+      if (stepWpp) { stepWpp.classList.add('is-on'); }
       window.open(url, '_blank', 'noopener');
     });
 
@@ -222,80 +309,4 @@
     });
   }
 
-  /* ─── Constelação ─── */
-  function constellation(canvasId, opts) {
-    var canvas = document.getElementById(canvasId);
-    if (!canvas || reduced) return;
-    var ctx = canvas.getContext('2d');
-    var dpr = Math.min(window.devicePixelRatio || 1, 2);
-    var pts = [], mouse = { x: -9999, y: -9999 };
-    var LINK = opts.link, COUNT = opts.count;
-
-    function resize() {
-      var r = canvas.getBoundingClientRect();
-      canvas.width = r.width * dpr;
-      canvas.height = r.height * dpr;
-      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-      build(r.width, r.height);
-    }
-    function build(w, h) {
-      pts = [];
-      var n = Math.min(COUNT, Math.floor(w / 22));
-      for (var i = 0; i < n; i++) {
-        pts.push({
-          x: Math.random() * w, y: Math.random() * h,
-          vx: (Math.random() - 0.5) * 0.28, vy: (Math.random() - 0.5) * 0.28,
-          r: Math.random() * 1.4 + 1
-        });
-      }
-    }
-    canvas.parentElement.addEventListener('mousemove', function (e) {
-      var r = canvas.getBoundingClientRect();
-      mouse.x = e.clientX - r.left; mouse.y = e.clientY - r.top;
-    });
-    canvas.parentElement.addEventListener('mouseleave', function () {
-      mouse.x = -9999; mouse.y = -9999;
-    });
-
-    function tick() {
-      var w = canvas.width / dpr, h = canvas.height / dpr;
-      ctx.clearRect(0, 0, w, h);
-      for (var i = 0; i < pts.length; i++) {
-        var p = pts[i];
-        p.x += p.vx; p.y += p.vy;
-        if (p.x < 0 || p.x > w) p.vx *= -1;
-        if (p.y < 0 || p.y > h) p.vy *= -1;
-      }
-      for (var a = 0; a < pts.length; a++) {
-        for (var b = a + 1; b < pts.length; b++) {
-          var dx = pts[a].x - pts[b].x, dy = pts[a].y - pts[b].y;
-          var d = Math.sqrt(dx * dx + dy * dy);
-          if (d < LINK) {
-            ctx.strokeStyle = 'rgba(0,212,255,' + (0.16 * (1 - d / LINK)).toFixed(3) + ')';
-            ctx.lineWidth = 1;
-            ctx.beginPath(); ctx.moveTo(pts[a].x, pts[a].y); ctx.lineTo(pts[b].x, pts[b].y); ctx.stroke();
-          }
-        }
-      }
-      for (var k = 0; k < pts.length; k++) {
-        var q = pts[k];
-        var md = Math.sqrt(Math.pow(q.x - mouse.x, 2) + Math.pow(q.y - mouse.y, 2));
-        var near = md < 170;
-        if (near) {
-          ctx.strokeStyle = 'rgba(0,212,255,' + (0.3 * (1 - md / 170)).toFixed(3) + ')';
-          ctx.lineWidth = 1;
-          ctx.beginPath(); ctx.moveTo(q.x, q.y); ctx.lineTo(mouse.x, mouse.y); ctx.stroke();
-        }
-        ctx.fillStyle = near ? 'rgba(0,212,255,.95)' : 'rgba(0,212,255,.5)';
-        ctx.beginPath(); ctx.arc(q.x, q.y, q.r + (near ? 0.8 : 0), 0, Math.PI * 2); ctx.fill();
-      }
-      requestAnimationFrame(tick);
-    }
-    window.addEventListener('resize', resize);
-    resize();
-    tick();
-  }
-
-  constellation('netBg', { count: 64, link: 165 });
-  constellation('netBg2', { count: 34, link: 150 });
 })();
