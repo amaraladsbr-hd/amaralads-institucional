@@ -72,6 +72,17 @@ body::before{
   cursor:pointer;width:100%;
 }
 .video.is-playing .video-soon{display:none}
+.sound-hint{
+  position:absolute;left:50%;bottom:14px;transform:translateX(-50%);
+  display:none;align-items:center;gap:.4rem;z-index:2;
+  background:rgba(13,0,13,.72);backdrop-filter:blur(6px);
+  border:1px solid rgba(255,255,255,.16);border-radius:999px;
+  padding:.45rem .9rem;font-family:'IBM Plex Mono',monospace;font-size:.64rem;
+  letter-spacing:.05em;text-transform:uppercase;color:var(--white);cursor:pointer;
+  animation:soundPulse 1.8s ease-in-out infinite;
+}
+.video.is-muted-autoplay .sound-hint{display:flex}
+@keyframes soundPulse{0%,100%{opacity:.8}50%{opacity:1}}
 .play{
   width:58px;height:58px;border-radius:50%;
   display:grid;place-items:center;
@@ -134,13 +145,17 @@ body::before{
   </div>
 
   <figure class="video has-src" id="bioVideoWrap">
-    <video id="bioVideo" poster="assets/bio-video-poster.jpg" playsinline preload="metadata" controlslist="nodownload">
+    <video id="bioVideo" poster="assets/bio-video-poster.jpg" playsinline preload="auto" controlslist="nodownload">
       <source src="assets/bio-video.mp4" type="video/mp4">
     </video>
     <button type="button" class="video-soon" id="playBio" aria-label="Reproduzir vídeo">
       <span class="play" aria-hidden="true">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
       </span>
+    </button>
+    <button type="button" class="sound-hint" id="soundHint" aria-label="Ativar som">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H2v6h4l5 4V5z"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg>
+      Toque para ativar o som
     </button>
   </figure>
 
@@ -212,14 +227,56 @@ body::before{
   var video = document.getElementById('bioVideo');
   var wrap = document.getElementById('bioVideoWrap');
   var playBtn = document.getElementById('playBio');
+  var soundHint = document.getElementById('soundHint');
   function setPlaying(on) {
     wrap.classList.toggle('is-playing', on);
     if (on) video.setAttribute('controls', '');
     else video.removeAttribute('controls');
   }
+  function setMutedHint(on) { wrap.classList.toggle('is-muted-autoplay', on); }
+  function unmute() {
+    video.muted = false;
+    setMutedHint(false);
+  }
+
+  // Autoplay ao abrir a pagina: tenta com som primeiro (navegador quase sempre
+  // bloqueia isso numa primeira visita) e cai pra autoplay mudo + aviso "toque
+  // pro som" quando bloquear. Se ate o mudo for bloqueado, fica no poster
+  // esperando o clique manual (comportamento de antes).
+  function tryAutoplay() {
+    video.muted = false;
+    var p = video.play();
+    if (!p || !p.catch) { setPlaying(true); return; }
+    p.then(function () {
+      setPlaying(true);
+      setMutedHint(false);
+    }).catch(function () {
+      video.muted = true;
+      var p2 = video.play();
+      if (!p2 || !p2.catch) { setPlaying(true); setMutedHint(true); return; }
+      p2.then(function () {
+        setPlaying(true);
+        setMutedHint(true);
+      }).catch(function () {
+        setPlaying(false);
+        setMutedHint(false);
+      });
+    });
+  }
+  tryAutoplay();
+
   playBtn.addEventListener('click', function () {
+    video.muted = false;
     video.play();
     setPlaying(true);
+    setMutedHint(false);
+  });
+  soundHint.addEventListener('click', function (e) {
+    e.stopPropagation();
+    unmute();
+  });
+  wrap.addEventListener('click', function () {
+    if (wrap.classList.contains('is-muted-autoplay')) unmute();
   });
   video.addEventListener('play', function () { setPlaying(true); });
   video.addEventListener('pause', function () {
@@ -227,6 +284,7 @@ body::before{
   });
   video.addEventListener('ended', function () {
     setPlaying(false);
+    setMutedHint(false);
     video.currentTime = 0;
   });
 
