@@ -1,36 +1,31 @@
 <!DOCTYPE html>
 <!--
-  amaral.ads — Linktree / bio do Instagram
-  Identidade: manual de marca (preto, ciano, vermelho)
-  Coloque este link na bio: /bio/  (ex.: https://marketing.amaralads.com.br/bio/)
+  amaral.ads — Link na bio (objetivo único)
+  Vídeo: assets/bio-video.mp4 (H.264 720x1280, ~20s)
 -->
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>amaral.ads | Links</title>
-<meta name="description" content="Gestão de tráfego pago — Google Ads, Meta Ads e performance. Peça um diagnóstico, fale no WhatsApp ou acompanhe no Instagram.">
+<title>Agendar diagnóstico comercial | amaral.ads</title>
+<meta name="description" content="Investidor da maior assessoria de marketing do país. Agende um diagnóstico de 25 minutos: anúncios e funil de vendas na mesma mesa.">
 <meta name="robots" content="index, follow">
 <meta name="theme-color" content="#0D000D">
+<link rel="canonical" href="https://link.amaralads.com.br/">
 <link rel="icon" href="assets/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-<meta property="og:title" content="amaral.ads | Links">
-<meta property="og:description" content="Tráfego e performance corporativa. Todos os links em um só lugar.">
-<meta property="og:image" content="https://link.amaralads.com.br/assets/og-image.png">
+<meta property="og:title" content="Diagnóstico comercial gratuito | amaral.ads">
+<meta property="og:description" content="Um único objetivo: agendar 25 minutos com análise de anúncios e funil.">
+<meta property="og:image" content="assets/og-image.png">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
 <style>
 :root{
-  --black:#0D000D;
-  --panel:#161418;
-  --cyan:#00D4FF;
-  --red:#FF2D2D;
-  --silver:#A0A0A0;
-  --white:#F2F2F5;
-  --line:rgba(160,160,160,.18);
+  --black:#0D000D;--panel:#161418;--cyan:#00D4FF;--red:#FF2D2D;
+  --silver:#A0A0A0;--white:#F2F2F5;--line:rgba(160,160,160,.18);
   --ease:cubic-bezier(.22,.61,.36,1);
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -44,304 +39,277 @@ body{
 body::before{
   content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
   background:
-    radial-gradient(520px 340px at 50% -5%, rgba(0,212,255,.16), transparent 65%),
-    radial-gradient(380px 260px at 90% 80%, rgba(255,45,45,.06), transparent 60%);
+    radial-gradient(520px 340px at 50% -5%, rgba(0,212,255,.14), transparent 65%),
+    radial-gradient(380px 260px at 90% 80%, rgba(255,45,45,.05), transparent 60%);
 }
-body::after{
-  content:'';position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.28;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='0.35'/%3E%3C/svg%3E");
-  mix-blend-mode:overlay;
-}
-canvas#net{
-  position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none;opacity:.45;
-}
-
 .wrap{
   position:relative;z-index:2;width:min(420px,100%);
-  padding:clamp(2.2rem,6vw,3.2rem) 1.25rem 3rem;
-  display:flex;flex-direction:column;align-items:center;gap:1.35rem;
+  padding:clamp(1.6rem,5vw,2.4rem) 1.15rem 2.8rem;
+  display:flex;flex-direction:column;align-items:center;gap:1.15rem;
 }
-
-.avatar{
-  width:96px;height:96px;border-radius:50%;
-  border:1px solid rgba(0,212,255,.35);
-  background:linear-gradient(145deg,#1a121a,#0D000D);
-  display:grid;place-items:center;
-  box-shadow:0 0 0 6px rgba(0,212,255,.06), 0 18px 50px rgba(0,0,0,.55);
-  animation:rise .7s var(--ease) both;
-}
-.avatar img{width:58px;height:58px;display:block}
-
-.identity{text-align:center;animation:rise .7s var(--ease) .08s both}
-.identity h1{
-  font-family:Syne,sans-serif;font-weight:800;font-size:1.55rem;
-  letter-spacing:-0.03em;line-height:1;
-}
+.identity{text-align:center}
+.identity h1{font-family:Syne,sans-serif;font-weight:800;font-size:1.45rem;letter-spacing:-.03em;line-height:1}
 .identity h1 span{color:var(--cyan)}
 .identity .tag{
-  margin-top:.55rem;font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;
-  color:var(--silver);font-weight:500;
+  margin-top:.5rem;font-family:'IBM Plex Mono',monospace;font-size:.62rem;
+  letter-spacing:.16em;text-transform:uppercase;color:var(--silver);
 }
-.identity .bio{
-  margin-top:.85rem;color:var(--silver);font-size:.92rem;max-width:32ch;margin-inline:auto;
-}
+.identity .bio{margin-top:.7rem;color:var(--silver);font-size:.9rem;max-width:34ch;margin-inline:auto}
 
-.chips{
-  display:flex;flex-wrap:wrap;justify-content:center;gap:.4rem;
-  animation:rise .7s var(--ease) .14s both;
+.video{
+  width:100%;position:relative;border-radius:16px;overflow:hidden;
+  border:1px solid var(--line);background:#110e12;
+  aspect-ratio:9/16;max-height:min(58vh,520px);
+  box-shadow:0 24px 50px rgba(0,0,0,.45);
 }
-.chip{
-  font-size:.68rem;letter-spacing:.04em;color:var(--cyan);
-  border:1px solid rgba(0,212,255,.25);background:rgba(0,212,255,.08);
-  padding:.28rem .6rem;border-radius:999px;
+.video video,.video img{
+  width:100%;height:100%;object-fit:cover;object-position:center top;display:block;
 }
-
-.links{width:100%;display:flex;flex-direction:column;gap:.7rem}
-.link{
-  --d:0s;
-  display:flex;align-items:center;gap:.95rem;
-  width:100%;padding:.95rem 1.05rem;
-  background:rgba(22,20,24,.82);border:1px solid var(--line);border-radius:14px;
-  color:var(--white);text-decoration:none;
-  backdrop-filter:blur(10px);
-  transition:transform .28s var(--ease), border-color .28s var(--ease), background .28s var(--ease), box-shadow .28s var(--ease);
-  animation:rise .65s var(--ease) var(--d) both;
-  position:relative;overflow:hidden;
+.video-soon{
+  position:absolute;inset:0;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;
+  border:0;background:linear-gradient(180deg,transparent 40%,rgba(13,0,13,.55) 100%);
+  cursor:pointer;width:100%;
 }
-.link::before{
-  content:'';position:absolute;inset:0;background:linear-gradient(110deg, transparent 30%, rgba(0,212,255,.08), transparent 70%);
-  transform:translateX(-120%);transition:transform .55s var(--ease);
-}
-.link:hover{
-  transform:translateY(-3px) scale(1.01);
-  border-color:rgba(0,212,255,.45);
-  background:rgba(28,28,30,.95);
-  box-shadow:0 14px 36px rgba(0,0,0,.4), 0 0 24px rgba(0,212,255,.08);
-}
-.link:hover::before{transform:translateX(120%)}
-.link.primary{
-  background:linear-gradient(135deg, rgba(0,212,255,.18), rgba(22,20,24,.9));
-  border-color:rgba(0,212,255,.4);
-}
-.link.primary:hover{box-shadow:0 14px 40px rgba(0,212,255,.18)}
-
-.ico{
-  width:40px;height:40px;flex:none;border-radius:10px;
+.video.is-playing .video-soon{display:none}
+.play{
+  width:58px;height:58px;border-radius:50%;
   display:grid;place-items:center;
-  background:rgba(0,212,255,.1);border:1px solid rgba(0,212,255,.2);color:var(--cyan);
+  background:rgba(0,212,255,.92);color:#04121a;
+  box-shadow:0 0 0 10px rgba(0,212,255,.12),0 12px 30px rgba(0,0,0,.4);
 }
-.link.primary .ico{background:var(--cyan);border-color:var(--cyan);color:#04121a}
-.txt{flex:1;min-width:0}
-.txt strong{
-  display:block;font-family:Syne,sans-serif;font-weight:700;font-size:.95rem;
-  letter-spacing:-0.02em;
-}
-.txt small{display:block;color:var(--silver);font-size:.75rem;margin-top:.12rem}
-.arrow{color:rgba(0,212,255,.55);transition:transform .28s var(--ease), color .28s}
-.link:hover .arrow{transform:translateX(4px);color:var(--cyan)}
 
-.social{
-  display:flex;gap:.7rem;margin-top:.4rem;
-  animation:rise .7s var(--ease) .55s both;
+.btn{
+  display:flex;align-items:center;justify-content:center;gap:.55rem;width:100%;
+  font-family:Syne,sans-serif;font-weight:700;font-size:.9rem;
+  padding:1rem 1.1rem;border:0;border-radius:12px;cursor:pointer;
+  background:var(--cyan);color:#04121a;text-decoration:none;
+  box-shadow:0 12px 34px rgba(0,212,255,.22);
+  transition:transform .25s var(--ease);
 }
-.social a{
-  width:42px;height:42px;border-radius:50%;
-  display:grid;place-items:center;
-  border:1px solid var(--line);color:var(--silver);
-  transition:color .25s, border-color .25s, transform .25s var(--ease);
-}
-.social a:hover{color:var(--cyan);border-color:rgba(0,212,255,.4);transform:translateY(-2px)}
+.btn:hover{transform:translateY(-2px)}
+.micro{font-size:.72rem;color:var(--silver);text-align:center;max-width:34ch}
 
-.foot{
-  margin-top:.6rem;text-align:center;color:var(--silver);font-size:.7rem;
-  letter-spacing:.08em;text-transform:uppercase;
-  animation:rise .7s var(--ease) .62s both;
+.lead-form{
+  width:100%;background:rgba(22,20,24,.86);border:1px solid var(--line);
+  border-radius:16px;padding:1.15rem 1.05rem 1.2rem;display:none;
 }
+.lead-form.open{display:block;animation:rise .4s var(--ease)}
+.lead-form h2{font-family:Syne,sans-serif;font-size:1.05rem;margin-bottom:.25rem}
+.lead-form .sub{font-size:.78rem;color:var(--silver);margin-bottom:1rem}
+.field{display:flex;flex-direction:column;gap:.32rem;margin-bottom:.7rem}
+.field label{font-family:Syne,sans-serif;font-size:.68rem;letter-spacing:.04em;text-transform:uppercase}
+.field label .req{color:var(--cyan)}
+.field input,.field select{
+  width:100%;background:rgba(13,0,13,.55);color:var(--white);
+  border:1px solid var(--line);border-radius:8px;padding:.78rem .9rem;outline:none;appearance:none;font:inherit;
+}
+.field select{
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%2300D4FF' stroke-width='1.6' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:right .9rem center;padding-right:2.2rem;
+}
+.field select option{background:#1C1C1E}
+.field input:focus,.field select:focus{border-color:rgba(0,212,255,.55)}
+.field input.invalid,.field select.invalid{border-color:rgba(255,45,45,.55)}
+.form-note{font-size:.68rem;color:var(--silver);text-align:center;margin-top:.7rem}
+.form-success{display:none;text-align:center;padding:1.4rem .4rem}
+.lead-form.is-sent .form-fields{display:none}
+.lead-form.is-sent .form-success{display:block}
+.form-success h3{font-family:Syne,sans-serif;margin:.8rem 0 .4rem}
+.form-success p{color:var(--silver);font-size:.85rem;margin-bottom:1rem}
+
+.foot{margin-top:.2rem;text-align:center;color:var(--silver);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase}
 .foot a{color:var(--cyan);text-decoration:none}
 
-@keyframes rise{
-  from{opacity:0;transform:translateY(18px)}
-  to{opacity:1;transform:none}
-}
-@media (prefers-reduced-motion:reduce){
-  *,*::before,*::after{animation:none!important;transition:none!important}
-}
+@keyframes rise{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
 </head>
 <body>
-<canvas id="net" aria-hidden="true"></canvas>
-
 <main class="wrap">
-  <div class="avatar" aria-hidden="true">
-    <img src="assets/icon-192.png" alt="" width="58" height="58">
-  </div>
-
   <div class="identity">
     <h1>amaral<span>.ads</span></h1>
-    <p class="tag">tráfego e performance corporativa</p>
-    <p class="bio">Gestão de Google Ads e Meta Ads com rastreamento auditável — do clique ao contrato.</p>
+    <p class="tag">Ecossistema integrado de growth B2B</p>
+    <p class="bio">Olá — sou investidor da maior assessoria de marketing do país. Se você quer parar de perder vendas e estruturar tráfego integrado ao comercial, agende 25 minutos comigo.</p>
   </div>
 
-  <div class="chips" aria-hidden="true">
-    <span class="chip">Google Ads</span>
-    <span class="chip">Meta Ads</span>
-    <span class="chip">GA4 · GTM</span>
-  </div>
+  <figure class="video has-src" id="bioVideoWrap">
+    <video id="bioVideo" poster="assets/bio-video-poster.jpg" playsinline preload="metadata" controlslist="nodownload">
+      <source src="assets/bio-video.mp4" type="video/mp4">
+    </video>
+    <button type="button" class="video-soon" id="playBio" aria-label="Reproduzir vídeo">
+      <span class="play" aria-hidden="true">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+      </span>
+    </button>
+  </figure>
 
-  <nav class="links" aria-label="Links da bio">
-    <a class="link primary" style="--d:.18s" href="https://marketing.amaralads.com.br/#contato" data-track="diagnostico">
-      <span class="ico">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z"/></svg>
-      </span>
-      <span class="txt">
-        <strong>Pedir diagnóstico</strong>
-        <small>Formulário rápido — onde sua verba vaza</small>
-      </span>
-      <span class="arrow" aria-hidden="true">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-      </span>
-    </a>
+  <a class="btn" href="#form" id="openForm">
+    Agendar diagnóstico comercial gratuito
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+  </a>
+  <p class="micro">Sessão individual de 25 minutos. Anúncios + funil. Sem compromisso.</p>
 
-    <a class="link" style="--d:.26s" href="https://marketing.amaralads.com.br/" data-track="site">
-      <span class="ico">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 010 18M12 3a14 14 0 000 18"/></svg>
-      </span>
-      <span class="txt">
-        <strong>Site completo</strong>
-        <small>Como funciona a operação amaral.ads</small>
-      </span>
-      <span class="arrow" aria-hidden="true">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-      </span>
-    </a>
+  <form class="lead-form" id="bioForm" novalidate>
+    <div class="form-fields">
+      <h2 id="form">Qualificação rápida</h2>
+      <p class="sub">4 campos. A gente te chama no WhatsApp para marcar o horário.</p>
 
-    <a class="link" style="--d:.34s" id="linkWpp" href="#" target="_blank" rel="noopener" data-track="whatsapp">
-      <span class="ico">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 01-1.2 4.4 8.5 8.5 0 01-7.3 4.1 8.4 8.4 0 01-4.4-1.2L3 21l2.2-4.9A8.4 8.4 0 014.5 12a8.5 8.5 0 014.1-7.3A8.4 8.4 0 0113 3.5a8.5 8.5 0 018 8z"/></svg>
-      </span>
-      <span class="txt">
-        <strong>WhatsApp</strong>
-        <small>Fale com um especialista</small>
-      </span>
-      <span class="arrow" aria-hidden="true">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-      </span>
-    </a>
+      <div class="field">
+        <label>Seu nome <span class="req">*</span></label>
+        <input type="text" name="nome" placeholder="Nome completo" autocomplete="name" required>
+      </div>
+      <div class="field">
+        <label>WhatsApp <span class="req">*</span></label>
+        <input type="tel" name="whatsapp" placeholder="(00) 00000-0000" autocomplete="tel" required>
+      </div>
+      <div class="field">
+        <label>Empresa <span class="req">*</span></label>
+        <input type="text" name="empresa" placeholder="Nome da empresa" required>
+      </div>
+      <div class="field">
+        <label>Sua situação <span class="req">*</span></label>
+        <select name="situacao" required>
+          <option value="" disabled selected>Selecione...</option>
+          <option value="comecar">Ainda não invisto em tráfego — quero começar</option>
+          <option value="acelerar">Já invisto, mas sem resultado — quero acelerar</option>
+        </select>
+      </div>
+      <button type="submit" class="btn">Enviar e abrir WhatsApp</button>
+      <p class="form-note">Ao enviar, abrimos o WhatsApp com a mensagem pronta.</p>
+    </div>
+    <div class="form-success" id="bioSuccess">
+      <h3>Recebido.</h3>
+      <p>Se o WhatsApp não abriu, toca abaixo.</p>
+      <a class="btn" id="bioWppFallback" href="#" target="_blank" rel="noopener">Abrir WhatsApp</a>
+    </div>
+  </form>
 
-    <a class="link" style="--d:.42s" href="https://www.instagram.com/amaral.ads.br/" target="_blank" rel="noopener" data-track="instagram">
-      <span class="ico">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></svg>
-      </span>
-      <span class="txt">
-        <strong>Instagram</strong>
-        <small>@amaral.ads.br</small>
-      </span>
-      <span class="arrow" aria-hidden="true">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-      </span>
-    </a>
-
-    <a class="link" style="--d:.5s" href="mailto:amaral.ads.br@gmail.com" data-track="email">
-      <span class="ico">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16v12H4z"/><path d="M4 7l8 6 8-6"/></svg>
-      </span>
-      <span class="txt">
-        <strong>E-mail</strong>
-        <small>amaral.ads.br@gmail.com</small>
-      </span>
-      <span class="arrow" aria-hidden="true">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-      </span>
-    </a>
-  </nav>
-
-  <div class="social">
-    <a href="https://www.instagram.com/amaral.ads.br/" target="_blank" rel="noopener" aria-label="Instagram">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></svg>
-    </a>
-    <a href="mailto:amaral.ads.br@gmail.com" aria-label="E-mail">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16v12H4z"/><path d="M4 7l8 6 8-6"/></svg>
-    </a>
-  </div>
-
-  <p class="foot">amaral.ads · <a href="https://marketing.amaralads.com.br/">ver site</a></p>
+  <p class="foot">amaral.ads · <a href="https://marketing.amaralads.com.br/">ver o método</a></p>
 </main>
 
 <script src="assets/storage.js"></script>
 <script src="assets/tracking.js"></script>
 <script>
-(function(){
+(function () {
   'use strict';
-  try {
-    if (window.AmaralStore) {
-      AmaralStore.captureAttribution();
-      var s = AmaralStore.getSettings();
-      var num = String(s.whatsapp || '5531991985605').replace(/\D/g,'');
-      var msg = encodeURIComponent('Oi! Vim pelo link da bio do Instagram (@amaral.ads.br) e quero saber mais sobre a gestão de tráfego.');
-      var w = document.getElementById('linkWpp');
-      w.href = 'https://wa.me/' + num + '?text=' + msg;
-      if (s.email) {
-        var mail = document.querySelector('a[href^="mailto:"]');
-        // keep primary mailto as corporate email
-      }
-      if (s.instagram) {
-        document.querySelectorAll('a[href*="instagram.com"]').forEach(function(a){ a.href = s.instagram; });
-      }
-    }
-    if (window.AmaralTracking) AmaralTracking.init();
-  } catch(e) {}
+  var PATH_LABEL = {
+    comecar: 'Quero começar (ainda não invisto)',
+    acelerar: 'Quero acelerar (já invisto, sem resultado)'
+  };
 
-  document.querySelectorAll('[data-track]').forEach(function(el){
-    el.addEventListener('click', function(){
-      try {
-        window.dataLayer = window.dataLayer || [];
-        window.dataLayer.push({
-          event: 'bio_link_click',
-          link_id: el.getAttribute('data-track'),
-          link_url: el.href
-        });
-      } catch(e) {}
-    });
+  try {
+    if (window.AmaralStore) AmaralStore.captureAttribution();
+    if (window.AmaralTracking) AmaralTracking.init();
+  } catch (e) {}
+
+  var settings = (window.AmaralStore && AmaralStore.getSettings()) || { whatsapp: '5531991985605' };
+  function wppUrl(text) {
+    var num = String(settings.whatsapp || '5531991985605').replace(/\D/g, '');
+    return 'https://wa.me/' + num + '?text=' + encodeURIComponent(text);
+  }
+
+  var video = document.getElementById('bioVideo');
+  var wrap = document.getElementById('bioVideoWrap');
+  var playBtn = document.getElementById('playBio');
+  function setPlaying(on) {
+    wrap.classList.toggle('is-playing', on);
+    if (on) video.setAttribute('controls', '');
+    else video.removeAttribute('controls');
+  }
+  playBtn.addEventListener('click', function () {
+    video.play();
+    setPlaying(true);
+  });
+  video.addEventListener('play', function () { setPlaying(true); });
+  video.addEventListener('pause', function () {
+    if (video.currentTime > 0 && !video.ended) setPlaying(true);
+  });
+  video.addEventListener('ended', function () {
+    setPlaying(false);
+    video.currentTime = 0;
   });
 
-  // Constelação leve
-  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var canvas = document.getElementById('net');
-  if (!canvas || reduced) return;
-  var ctx = canvas.getContext('2d');
-  var dpr = Math.min(window.devicePixelRatio || 1, 2);
-  var pts = [];
-  function resize(){
-    canvas.width = innerWidth * dpr; canvas.height = innerHeight * dpr;
-    ctx.setTransform(dpr,0,0,dpr,0,0);
-    pts = [];
-    var n = Math.min(42, Math.floor(innerWidth/28));
-    for (var i=0;i<n;i++) pts.push({
-      x:Math.random()*innerWidth, y:Math.random()*innerHeight,
-      vx:(Math.random()-.5)*.22, vy:(Math.random()-.5)*.22, r:Math.random()*1.3+0.8
-    });
+  var form = document.getElementById('bioForm');
+  var openBtn = document.getElementById('openForm');
+  openBtn.addEventListener('click', function (e) {
+    e.preventDefault();
+    form.classList.add('open');
+    form.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    var first = form.querySelector('input');
+    if (first) first.focus();
+  });
+
+  var phone = form.querySelector('[name="whatsapp"]');
+  function onlyDigits(v) { return String(v || '').replace(/\D/g, ''); }
+  function maskPhone(v) {
+    var d = onlyDigits(v).slice(0, 11);
+    if (d.length <= 2) return d.length ? '(' + d : '';
+    if (d.length <= 6) return '(' + d.slice(0, 2) + ') ' + d.slice(2);
+    if (d.length <= 10) return '(' + d.slice(0, 2) + ') ' + d.slice(2, 6) + '-' + d.slice(6);
+    return '(' + d.slice(0, 2) + ') ' + d.slice(2, 7) + '-' + d.slice(7);
   }
-  function tick(){
-    ctx.clearRect(0,0,innerWidth,innerHeight);
-    for (var i=0;i<pts.length;i++){
-      var p=pts[i]; p.x+=p.vx; p.y+=p.vy;
-      if(p.x<0||p.x>innerWidth)p.vx*=-1;
-      if(p.y<0||p.y>innerHeight)p.vy*=-1;
-    }
-    for (var a=0;a<pts.length;a++) for (var b=a+1;b<pts.length;b++){
-      var dx=pts[a].x-pts[b].x, dy=pts[a].y-pts[b].y, d=Math.sqrt(dx*dx+dy*dy);
-      if(d<140){
-        ctx.strokeStyle='rgba(0,212,255,'+(0.14*(1-d/140)).toFixed(3)+')';
-        ctx.beginPath(); ctx.moveTo(pts[a].x,pts[a].y); ctx.lineTo(pts[b].x,pts[b].y); ctx.stroke();
-      }
-    }
-    pts.forEach(function(p){
-      ctx.fillStyle='rgba(0,212,255,.45)';
-      ctx.beginPath(); ctx.arc(p.x,p.y,p.r,0,Math.PI*2); ctx.fill();
+  phone.addEventListener('input', function () { phone.value = maskPhone(phone.value); });
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var fields = form.querySelectorAll('[required]');
+    var ok = true;
+    Array.prototype.forEach.call(fields, function (el) {
+      var empty = !String(el.value || '').trim();
+      el.classList.toggle('invalid', empty);
+      if (empty) ok = false;
     });
-    requestAnimationFrame(tick);
-  }
-  addEventListener('resize', resize); resize(); tick();
+    if (onlyDigits(phone.value).length < 10) { phone.classList.add('invalid'); ok = false; }
+    if (!ok) {
+      var first = form.querySelector('.invalid');
+      if (first) first.focus();
+      return;
+    }
+
+    var data = {
+      nome: form.nome.value.trim(),
+      whatsapp: form.whatsapp.value.trim(),
+      empresa: form.empresa.value.trim(),
+      situacao: form.situacao.value
+    };
+
+    var attribution = window.AmaralStore ? AmaralStore.getAttribution() : {};
+    if (window.AmaralStore) {
+      var lead = AmaralStore.createLead({
+        nome: data.nome,
+        whatsapp: data.whatsapp,
+        email: '',
+        empresa: data.empresa,
+        segmento: PATH_LABEL[data.situacao] || data.situacao,
+        investimento: '',
+        site: '',
+        desafio: '',
+        situacao: data.situacao,
+        source: 'bio_form',
+        attribution: attribution
+      });
+      try { if (window.AmaralTracking) AmaralTracking.trackLead(lead); } catch (err) {}
+    }
+
+    var msg = [
+      'Oi! Vim pelo link da bio do Instagram (@amaral.ads.br) e quero agendar o diagnóstico comercial gratuito.',
+      '',
+      '*Nome:* ' + data.nome,
+      '*WhatsApp:* ' + data.whatsapp,
+      '*Empresa:* ' + data.empresa,
+      '*Situação:* ' + (PATH_LABEL[data.situacao] || data.situacao)
+    ].join('\n');
+    var url = wppUrl(msg);
+    var fallback = document.getElementById('bioWppFallback');
+    fallback.href = url;
+    form.classList.add('is-sent');
+    window.open(url, '_blank', 'noopener');
+  });
+
+  form.addEventListener('input', function (e) {
+    if (e.target && e.target.classList) e.target.classList.remove('invalid');
+  });
 })();
 </script>
 </body>
