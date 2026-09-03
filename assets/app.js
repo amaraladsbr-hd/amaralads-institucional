@@ -309,4 +309,72 @@
     });
   }
 
+  /* ─── Reveal cinematico do H1, palavra por palavra ─── */
+  var heroH1 = document.querySelector('.hero h1');
+  if (heroH1 && !reduced) {
+    var words = heroH1.textContent.trim().split(/\s+/);
+    heroH1.innerHTML = words.map(function (w, i) {
+      return '<span class="wmask"><span class="wi" style="transition-delay:' + (i * 65 + 100) + 'ms">' + w + '</span></span>';
+    }).join(' ');
+    requestAnimationFrame(function () {
+      requestAnimationFrame(function () { heroH1.classList.add('in'); });
+    });
+  }
+
+  /* ─── Cursor customizado + botoes magneticos + spotlight nos cards ───
+     So em dispositivos com mouse de verdade (pointer:fine + hover:hover).
+     Em touch/reduced-motion nada disso roda — fica so o cursor nativo. */
+  var hasFinePointer = window.matchMedia('(pointer: fine)').matches && window.matchMedia('(hover: hover)').matches;
+  if (hasFinePointer && !reduced) {
+    var cxDot = document.createElement('div');
+    cxDot.className = 'cx-dot';
+    cxDot.setAttribute('aria-hidden', 'true');
+    var cxRing = document.createElement('div');
+    cxRing.className = 'cx-ring';
+    cxRing.setAttribute('aria-hidden', 'true');
+    document.body.appendChild(cxRing);
+    document.body.appendChild(cxDot);
+
+    var mx = -100, my = -100, rx = -100, ry = -100;
+    window.addEventListener('mousemove', function (e) {
+      mx = e.clientX; my = e.clientY;
+      cxDot.style.transform = 'translate(' + mx + 'px,' + my + 'px)';
+      document.body.classList.add('cx-active');
+    }, { passive: true });
+    document.documentElement.addEventListener('mouseleave', function () {
+      document.body.classList.remove('cx-active');
+    });
+
+    (function ringLoop() {
+      rx += (mx - rx) * 0.18;
+      ry += (my - ry) * 0.18;
+      cxRing.style.transform = 'translate(' + rx + 'px,' + ry + 'px)';
+      requestAnimationFrame(ringLoop);
+    })();
+
+    var hoverables = document.querySelectorAll('a, button, .pillar, .path, summary');
+    Array.prototype.forEach.call(hoverables, function (el) {
+      el.addEventListener('mouseenter', function () { document.body.classList.add('cx-hover'); });
+      el.addEventListener('mouseleave', function () { document.body.classList.remove('cx-hover'); });
+    });
+
+    Array.prototype.forEach.call(document.querySelectorAll('.btn'), function (btn) {
+      btn.addEventListener('mousemove', function (e) {
+        var r = btn.getBoundingClientRect();
+        var bx = e.clientX - r.left - r.width / 2;
+        var by = e.clientY - r.top - r.height / 2;
+        btn.style.transform = 'translate(' + (bx * 0.26) + 'px,' + (by * 0.3) + 'px)';
+      });
+      btn.addEventListener('mouseleave', function () { btn.style.transform = ''; });
+    });
+
+    Array.prototype.forEach.call(document.querySelectorAll('.pillar, .path'), function (card) {
+      card.addEventListener('mousemove', function (e) {
+        var r = card.getBoundingClientRect();
+        card.style.setProperty('--mx', ((e.clientX - r.left) / r.width * 100) + '%');
+        card.style.setProperty('--my', ((e.clientY - r.top) / r.height * 100) + '%');
+      });
+    });
+  }
+
 })();

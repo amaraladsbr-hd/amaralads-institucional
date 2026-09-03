@@ -281,8 +281,36 @@ footer{padding:4.2rem 0 1.6rem;background:#040404;border-top:1px solid var(--lin
   .footer-grid>div:first-child{grid-column:1/-1}
   .footer-bottom{gap:.9rem;align-items:flex-start;flex-direction:column}
 }
+/* ─── reveal cinematico do H1 (palavra por palavra) ─── */
+.wmask{display:inline-block;overflow:hidden;vertical-align:top}
+.wi{display:inline-block;transform:translateY(112%);transition:transform 1s var(--ease)}
+.hero h1.in .wi{transform:none}
+
+/* ─── cursor personalizado (so mouse fino, ver JS) ─── */
+.cx-dot,.cx-ring{position:fixed;top:0;left:0;pointer-events:none;z-index:9999;border-radius:50%;will-change:transform}
+.cx-dot{width:6px;height:6px;background:var(--cyan);margin:-3px 0 0 -3px;opacity:0;transition:opacity .2s}
+.cx-ring{width:34px;height:34px;border:1px solid var(--cyan-dim);margin:-17px 0 0 -17px;opacity:0;transition:opacity .2s,width .3s var(--ease),height .3s var(--ease),margin .3s var(--ease),border-color .3s}
+body.cx-active .cx-dot,body.cx-active .cx-ring{opacity:1}
+body.cx-hover .cx-ring{width:56px;height:56px;margin:-28px 0 0 -28px;border-color:var(--cyan)}
+body.cx-active,body.cx-active a,body.cx-active button,body.cx-active .pillar,body.cx-active .path,body.cx-active summary{cursor:none}
+body.cx-active input,body.cx-active select,body.cx-active textarea,body.cx-active label{cursor:auto}
+
+/* ─── spotlight nos cards (segue o cursor) ─── */
+.pillar,.path{--mx:50%;--my:50%}
+.pillar:before,.path:before{content:'';position:absolute;inset:0;background:radial-gradient(240px circle at var(--mx) var(--my),rgba(0,212,255,.08),transparent 72%);opacity:0;transition:opacity .4s;pointer-events:none}
+.pillar:hover:before,.path:hover:before{opacity:1}
+.path{position:relative;overflow:hidden}
+
+/* ─── botoes com massa magnetica ─── */
+.btn{will-change:transform}
+
+@media(hover:none),(pointer:coarse){
+  .cx-dot,.cx-ring{display:none}
+}
 @media(prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   .reveal{opacity:1;transform:none;transition:none}
+  .wi{transform:none;transition:none}
+  .cx-dot,.cx-ring{display:none}
   *{animation:none!important}
 }
