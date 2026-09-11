@@ -41,6 +41,7 @@
   .cta{width:100%;margin-top:1.1rem;border:1px solid var(--accent);background:var(--accent);color:#031014;padding:1.05rem;font:800 .8rem Syne;text-transform:uppercase;letter-spacing:.02em;cursor:pointer;text-decoration:none;display:flex;justify-content:center;gap:.6rem;transition:transform .25s,box-shadow .25s,background .25s}
   .cta:hover{background:#33dfff;transform:translateY(-2px);box-shadow:0 14px 30px rgba(0,212,255,.2)}
   .micro{text-align:center;color:#666;font-family:var(--mono);font-size:.64rem;margin:.85rem 0 1.2rem}
+  .honest{text-align:center;color:#8a867f;font-style:italic;font-size:.78rem;line-height:1.5;max-width:34ch;margin:-.6rem auto 1.2rem}
   .form{display:none;background:var(--paper);color:#161310;padding:1.4rem;margin-top:1.1rem;border-top:3px solid var(--accent)}
   .form.open{display:grid;gap:.9rem;animation:rise .35s ease}
   .form.sent>*:not(.success){display:none}
@@ -69,6 +70,7 @@
 <div class="benefits"><div><strong>25 min</strong><span>diagnóstico direto</span></div><div><strong>1 a 1</strong><span>análise individual</span></div><div><strong>Sem custo</strong><span>e sem compromisso</span></div></div>
 <button class="cta" id="openForm">Quero meu diagnóstico <span>↗</span></button>
 <p class="micro">Responda quatro perguntas · WhatsApp abre com a mensagem pronta</p>
+<p class="honest">É de graça porque quem recebe o diagnóstico geralmente segue com a gente depois. Sem problema se não seguir.</p>
 <form class="form" id="bioForm" novalidate><h2>Vamos entender seu momento.</h2><p>Leva menos de um minuto.</p><label>Nome<input name="nome" autocomplete="name" required placeholder="Seu nome"></label><label>WhatsApp<input name="whatsapp" autocomplete="tel" inputmode="tel" required placeholder="(31) 99999-9999"></label><label>Empresa<input name="empresa" autocomplete="organization" required placeholder="Nome da empresa"></label><label>Situação<select name="situacao" required><option value="">Selecione</option><option value="comecar">Ainda não invisto em tráfego</option><option value="acelerar">Já invisto, mas não tenho retorno claro</option></select></label><button class="cta" type="submit">Enviar e abrir WhatsApp <span>↗</span></button><div class="success"><div class="mark-ok">✓</div><b>Dados recebidos.</b><p>Se o WhatsApp não abriu, toque abaixo.</p><a class="cta" id="bioWppFallback" href="#">Abrir WhatsApp ↗</a></div></form>
 <div class="footer"><a href="../">Conhecer o site completo</a> · <a href="https://www.instagram.com/amaral.ads.br/">Instagram</a></div>
 </main><script src="../assets/storage.js"></script><script src="../assets/tracking.js"></script><script>
