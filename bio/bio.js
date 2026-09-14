@@ -21,6 +21,38 @@
     acelerar: 'Já invisto, mas não tenho retorno claro'
   };
 
+  /* ─── vídeo: autoplay tentando com som, cai pra mudo se o navegador bloquear ─── */
+  var video = document.getElementById('bioVideo');
+  var videoFrame = document.getElementById('bioVideoFrame');
+  var soundBtn = document.getElementById('bioSound');
+  if (video) {
+    var tryUnmutedPlay = function () {
+      video.muted = false;
+      var attempt = video.play();
+      if (attempt && attempt.catch) {
+        attempt.catch(function () {
+          video.muted = true;
+          var fallback = video.play();
+          if (fallback && fallback.catch) fallback.catch(function () {});
+          if (videoFrame) videoFrame.classList.add('is-muted');
+        });
+      }
+    };
+    if (video.readyState >= 2) tryUnmutedPlay();
+    else video.addEventListener('loadeddata', tryUnmutedPlay, { once: true });
+
+    if (soundBtn) {
+      soundBtn.addEventListener('click', function () {
+        video.muted = false;
+        video.play();
+        if (videoFrame) videoFrame.classList.remove('is-muted');
+      });
+    }
+    video.addEventListener('volumechange', function () {
+      if (!video.muted && videoFrame) videoFrame.classList.remove('is-muted');
+    });
+  }
+
   var openForm = document.getElementById('openForm');
   var form = document.getElementById('bioForm');
   if (!form) return;
